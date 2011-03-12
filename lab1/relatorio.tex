@@ -1,0 +1,110 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[top=3cm, bottom=2cm, left=3cm, right=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{booktabs}
+\usepackage{multirow}
+
+\title{Serviços de Rede e de Sistema \\
+Endereçamento IP e serviço DNS}
+
+\author{André Fernandes (ei03107) \and Pedro Batista (ext10392)}
+
+\begin{document}
+
+\maketitle
+
+\section{Endereçamento}
+\subsection{Projectar o esquema de endereçamento da rede da empresa,
+usando do bloco de endereços acima, apenas os blocos de endereços com
+o tamanho necessário para cada rede. Justifique.}
+
+\begin{table}[h]
+   \centering
+   \begin{tabular}{ l | c | c | c }
+      \toprule
+      \textbf{Descrição} & \textbf{Quantidade} & \textbf{Total} & \textbf{Intervalo de Endereços} \\\hline
+
+      \multicolumn{4}{c}{\textit{Rede de Servidores (VLAN000)}} \\\hline
+      Servidores & 3 & 3 & \ldots \\\hline
+
+      \multicolumn{4}{c}{\textit{Rede Edifício Sede (VLAN100)}} \\ \hline
+      Estações & 300 & 300 & 192.168.0.0 - 192.168.1.255 \\ \hline
+
+      \multicolumn{4}{c}{\textit{Loja 1 }} \\\hline
+      VLAN200 & 24 & \multirow{3}{*}{41} & \multirow{3}{*}{192.168.2.0 - 192.168.2.63} \\\cline{1-2}
+      VLAN201 & 16 & \\\cline{1-2}
+      Servidor & 1 & \\ \hline
+      \multicolumn{4}{c}{\textit{Loja 2}} \\\hline
+      VLAN210 & 24 & \multirow{3}{*}{41} & \multirow{3}{*}{192.168.2.64 - 192.168.2.127} \\\cline{1-2}
+      VLAN211 & 16 & \\\cline{1-2}
+      Servidor & 1 & \\ \hline
+      \multicolumn{4}{c}{\textit{Loja 3}} \\\hline
+      VLAN220 & 24 & \multirow{3}{*}{41} & \multirow{3}{*}{192.168.2.128 - 192.168.2.191} \\\cline{1-2}
+      VLAN221 & 16 & \\\cline{1-2}
+      Servidor & 1 & \\ \hline
+
+      \multicolumn{4}{c}{\textit{Armazém (VLAN300)}} \\\hline
+      Estações & 17 & \multirow{2}{*}{18} & \multirow{2}{*}{192.168.2.192 - 192.168.2.223} \\\cline{1-2}
+      Servidor & 1 & \\ \bottomrule
+
+   \end{tabular}
+   \caption{Esquema de endereçamento.}
+   \label{tab:enderecamento_esquema}
+\end{table}
+
+\subsection{Apresente os vários endereços (identificação da rede e broadcast) e as
+respectivas máscaras para cada uma das redes.}
+\subsection{Atribua endereços aos servidores indicados e às gateways de cada rede local.
+As boas práticas recomendam que os servidores tenham os endereços mais
+baixos da rede, por exemplo o mais baixo será o servidor de DNS, e a gateway
+o mais alto (antes do broadcast).}
+
+\begin{table}[ht]
+   \centering
+   \begin{tabular}{ l | c }
+      \toprule
+%      \textbf{Descrição} & \textbf{Rede} & \textbf{Broadcast} & \textbf{Mascara} \\\hline
+      \multicolumn{2}{c}{Rede Edifício Sede} \\\hline 
+      Rede & 192.168.0.0 \\\hline 
+      Broadcast & 192.168.1.255 \\\hline 
+      Mascara & 255.255.254.0 \\\hline
+      Gateway & 192.168.1.254 \\\hline
+
+      \multicolumn{2}{c}{Loja 1} \\\hline 
+      Rede & 192.168.2.0 \\\hline 
+      Broadcast & 192.168.2.63 \\\hline 
+      Mascara & 255.255.255.192 \\\hline
+      Gateway & 192.168.2.62 \\\hline
+      Servidor (DNS e Proxy) & 192.168.2.1 \\\hline
+      \multicolumn{2}{c}{Loja 2} \\\hline 
+      Rede & 192.168.2.64 \\\hline 
+      Broadcast & 192.168.2.127 \\\hline 
+      Mascara & 255.255.255.192 \\\hline
+      Gateway & 192.168.2.126 \\\hline
+      Servidor (DNS e Proxy) & 192.168.2.65 \\\hline
+      \multicolumn{2}{c}{Loja 3} \\\hline 
+      Rede & 192.168.2.128 \\\hline 
+      Broadcast & 192.168.2.191 \\\hline 
+      Mascara & 255.255.255.192 \\\hline
+      Gateway & 192.168.2.190 \\\hline
+      Servidor (DNS e Proxy) & 192.168.2.129 \\\hline
+
+      \multicolumn{2}{c}{Armazém} \\\hline 
+      Rede & 192.168.2.192 \\\hline 
+      Broadcast & 192.168.2.223 \\\hline 
+      Mascara & 255.255.255.224 \\\hline
+      Gateway & 192.168.2.222 \\\hline
+      Servidor (Cache DNS) & 192.168.2.193 \\\hline
+%      Loja 1 &             192.168.2.0   & 192.168.2.63  &      \multirow{3}{*}{255.255.255.192} \\\cline{1-3}
+%      Loja 2 &             192.168.2.64  & 192.168.2.127 &      \\\cline{1-3}
+%      Loja 3 &             192.168.2.128 & 192.168.2.191 &      \\\hline
+%      Armazém &            192.168.2.192   & 192.168.2.223 &      255.255.254.224 \\
+      \bottomrule
+   \end{tabular}
+   \caption{Subredes.}
+   \label{tab:subredes}
+\end{table}
+
+\end{document}
