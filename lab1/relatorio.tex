@@ -30,23 +30,19 @@ o tamanho necessário para cada rede. Justifique.}
       Servidores & 3 & 3 & 20.49.51.160 - 20.49.51.168 \\\hline
 
       \multicolumn{4}{c}{\textit{Rede de Servidores (VLAN500)}} \\\hline
-      Servidores & 3 & 3 & 192.168.2.192 - 192.168.2.199 \\\hline
+      Servidores & 3 & 3 & 192.168.2.224 - 192.168.2.231 \\\hline
 
       \multicolumn{4}{c}{\textit{Rede Edifício Sede (VLAN100)}} \\ \hline
       Estações & 300 & 300 & 192.168.0.0 - 192.168.1.255 \\ \hline
 
       \multicolumn{4}{c}{\textit{Loja 1 }} \\\hline
-      VLAN200 & 24 & \multirow{3}{*}{41} & \multirow{3}{*}{192.168.2.0 - 192.168.2.63} \\\cline{1-2}
-      VLAN201 & 16 & \\\cline{1-2}
-      Servidor & 1 & \\ \hline
+      VLAN200 & 25 & 25 & 192.168.2.0 - 192.168.2.31 \\\hline
+      VLAN201 & 17 & 17 & 192.168.2.32 - 192.168.2.63 \\\hline
       \multicolumn{4}{c}{\textit{Loja 2}} \\\hline
-      VLAN210 & 24 & \multirow{3}{*}{41} & \multirow{3}{*}{192.168.2.64 - 192.168.2.127} \\\cline{1-2}
-      VLAN211 & 16 & \\\cline{1-2}
-      Servidor & 1 & \\ \hline
+       VLAN200 & 25 & 25 & 192.168.2.0 - 192.168.2.31 \\\hline
+      VLAN201 & 17 & 17 & 192.168.2.32 - 192.168.2.63 \\\hline
+      
       \multicolumn{4}{c}{\textit{Loja 3}} \\\hline
-      VLAN220 & 24 & \multirow{3}{*}{41} & \multirow{3}{*}{192.168.2.128 - 192.168.2.191} \\\cline{1-2}
-      VLAN221 & 16 & \\\cline{1-2}
-      Servidor & 1 & \\ \hline
 
       \multicolumn{4}{c}{\textit{Armazém (VLAN300)}} \\\hline
       Estações & 17 & \multirow{2}{*}{18} & \multirow{2}{*}{192.168.2.192 - 192.168.2.223} \\\cline{1-2}
@@ -108,22 +104,22 @@ o mais alto (antes do broadcast).}
 %      Loja 3 &             192.168.2.128 & 192.168.2.191 &      \\\hline
 %      Armazém &            192.168.2.192   & 192.168.2.223 &      255.255.254.224 \\
       \multicolumn{2}{c}{Rede de Servidores Internos} \\\hline 
-      Rede & 192.168.2.192 \\\hline 
-      Broadcast & 192.168.2.199 \\\hline 
+      Rede & 192.168.2.224 \\\hline 
+      Broadcast & 192.168.2.231 \\\hline 
       Mascara & 255.255.255.248 \\\hline
-      Gateway & 192.168.2.198 \\\hline
-      Servidor DNS & 192.168.2.193 \\\hline
-      Servidor WWW & 192.168.2.194 \\\hline
-      Servidor MAIL & 192.168.2.195 \\\hline
+      Gateway & 192.168.2.230 \\\hline
+      Servidor DNS & 192.168.2.225 \\\hline
+      Servidor WWW & 192.168.2.226 \\\hline
+      Servidor MAIL & 192.168.2.227 \\\hline
 
       \multicolumn{2}{c}{DMZ} \\\hline 
-      Rede & 29.39.51.160 \\\hline 
-      Broadcast & 20.39.51.167 \\\hline 
+      Rede & 29.49.51.160 \\\hline 
+      Broadcast & 20.49.51.167 \\\hline 
       Mascara & 255.255.255.248 \\\hline
-      Gateway & 20.39.51.166 \\\hline
-      Servidor DNS & 20.39.51.161 \\\hline
-      Servidor WWW & 20.39.51.162 \\\hline
-      Servidor MAIL & 20.39.51.163 \\\hline
+      Gateway & 20.49.51.166 \\\hline
+      Servidor DNS & 20.49.51.161 \\\hline
+      Servidor WWW & 20.49.51.162 \\\hline
+      Servidor MAIL & 20.49.51.163 \\\hline
       \bottomrule
    \end{tabular}
    \caption{Subredes.}
