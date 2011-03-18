@@ -1,18 +1,22 @@
+gnu4
 ifconfig eth0 192.168.0.5 netmask 255.255.254.0
 route add default gw 192.168.1.254
 
+gnu2
 ifconfig eth0 192.168.2.193 netmask 255.255.255.224
 ifconfig eth1 192.168.2.194 netmask 255.255.255.224
 route add default gw 192.168.2.222
 
+gnu3
 ifconfig eth0 192.168.2.1 netmask 255.255.255.224
 ifconfig eth1 192.168.2.33 netmask 255.255.255.224
 route add default gw 192.168.2.30 dev eth0
 route add default gw 192.168.2.62 dev eth1
 
-ifconfig eth1 192.168.2.255 netmask 255.255.255.248
-ifconfig eth1:0 192.168.2.226 netmask 255.255.255.248
-ifconfig eth1:1 192.168.2.227 netmask 255.255.255.248
+gnu1
+ifconfig eth0 192.168.2.255 netmask 255.255.255.248
+ifconfig eth0:0 192.168.2.226 netmask 255.255.255.248
+ifconfig eth0:1 192.168.2.227 netmask 255.255.255.248
 route add default gw 192.168.2.230
 
 
