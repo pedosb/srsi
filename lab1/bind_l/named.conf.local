@@ -1,0 +1,6 @@
+// Servidor DNS loja1: named.conf.local
+zone "loja1.qquma.pt" {
+	type master;
+	file "/etc/bind/db.loja1.qquma.pt";
+	allow-transfer { 192.168.2.225; };
+}; 

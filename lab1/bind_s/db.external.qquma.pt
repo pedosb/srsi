@@ -1,0 +1,15 @@
+;
+; BIND data file for external on qquma.pt: db.external.qquma.pt
+;
+$TTL	604800
+@	IN	SOA	qquma.pt. pedosb.gmail.com. (
+		     2011032402		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	localhost.
+ns	IN	A	20.49.51.161
+www	IN	A	20.49.51.162
+mail	IN	A	20.49.51.163

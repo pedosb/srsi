@@ -1,0 +1,11 @@
+// Options servidor DNS qquma.pt: named.conf.options
+options {
+	directory "/var/cache/bind";
+	forwarders {
+		172.16.2.1;
+		172.16.2.2;
+	};
+	auth-nxdomain no;
+	listen-on-v6 { any; };
+	allow-query { any; };
+};

@@ -1,0 +1,22 @@
+
+; <<>> DiG 9.6-ESV-R3 <<>> @192.168.2.193 -b 192.168.0.5 ns.loja1.qquma.pt
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 63831
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;ns.loja1.qquma.pt.		IN	A
+
+;; ANSWER SECTION:
+ns.loja1.qquma.pt.	604800	IN	A	192.168.2.1
+
+;; AUTHORITY SECTION:
+loja1.qquma.pt.		604800	IN	NS	ns.loja1.qquma.pt.
+
+;; Query time: 10 msec
+;; SERVER: 192.168.2.193#53(192.168.2.193)
+;; WHEN: Thu Mar 24 22:25:04 2011
+;; MSG SIZE  rcvd: 65
+

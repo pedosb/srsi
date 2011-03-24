@@ -1,0 +1,12 @@
+// Servidor cache do armazém: named.conf.options
+options {
+	directory "/var/cache/bind";
+	forwarders {
+		192.168.2.225;
+		172.16.2.1;
+		172.16.2.2;
+	};
+	auth-nxdomain no;
+	listen-on-v6 { any; };
+	allow-query { any; };
+};

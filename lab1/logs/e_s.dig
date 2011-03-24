@@ -1,0 +1,26 @@
+
+; <<>> DiG 9.6-ESV-R3 <<>> @192.168.2.225 -b 192.168.0.5 ns.qquma.pt
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 36126
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 2
+
+;; QUESTION SECTION:
+;ns.qquma.pt.			IN	A
+
+;; ANSWER SECTION:
+ns.qquma.pt.		604800	IN	A	192.168.2.225
+
+;; AUTHORITY SECTION:
+qquma.pt.		604800	IN	NS	localhost.
+
+;; ADDITIONAL SECTION:
+localhost.		604800	IN	A	127.0.0.1
+localhost.		604800	IN	AAAA	::1
+
+;; Query time: 1 msec
+;; SERVER: 192.168.2.225#53(192.168.2.225)
+;; WHEN: Thu Mar 24 22:20:25 2011
+;; MSG SIZE  rcvd: 112
+

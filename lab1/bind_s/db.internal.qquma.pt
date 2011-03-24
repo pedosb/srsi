@@ -1,0 +1,16 @@
+;
+; BIND data file internal access on qquma.pt: db.internal.qquma.pt
+;
+$TTL	604800
+@	IN	SOA	qquma.pt. pedosb.gmail.com. (
+		     2011032403		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	localhost.
+ns	IN	A	192.168.2.225
+www	IN	A	192.168.2.226
+mail	IN	A	192.168.2.227
+armazem	IN	A	192.168.2.193
