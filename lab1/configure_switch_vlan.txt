@@ -1,0 +1,26 @@
+configure terminal
+   vlan 100
+   name edificil_sede
+end
+   configure terminal
+   vlan 210
+   name loja1_vlan1
+end
+   configure terminal
+   vlan 211
+   name loja1_vlan2
+end
+   configure terminal
+   vlan 300
+   name armazem 
+end
+   configure terminal
+   vlan 400 
+   name internet 
+end
+   configure terminal
+   vlan 500
+   name servidores_internos 
+end
+
+
