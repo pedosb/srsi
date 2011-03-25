@@ -2,26 +2,45 @@ configure terminal
    interface fastEthernet 0/0.100
       encapsulation dot1Q 100
       ip address 192.168.1.254 255.255.254.0
+      ip nat inside
       no shutdown
    exit
    interface fastEthernet 0/0.210
       encapsulation dot1Q 210
       ip address 192.168.2.30 255.255.255.224
+      ip nat inside
       no shutdown
    exit
    interface fastEthernet 0/0.211
       encapsulation dot1Q 211
       ip address 192.168.2.62 255.255.255.224
+      ip nat inside
       no shutdown
    exit
    interface fastEthernet 0/0.300 
       encapsulation dot1Q 300
       ip address 192.168.2.222 255.255.255.224
+      ip nat inside
       no shutdown
    exit
    interface fastEthernet 0/0.500
       encapsulation dot1Q 500
       ip address 192.168.2.230 255.255.255.248
+      ip nat inside
       no shutdown
    exit
+end
+
+configure terminal
+   interface fastEthernet 0/1
+      ip address 172.16.2.69 255.255.255.0
+      no shutdown
+      ip nat outside
+   exit
+   ip nat pool ovrld 172.16.2.69 172.16.2.69 prefix 24
+   ip nat inside source list 1 pool ovrld overload
+   access-list 1 permit 192.168.0.0 0.0.0.255
+   access-list 1 permit 192.168.1.0 0.0.0.255
+   access-list 1 permit 192.168.2.0 0.0.0.255
+   ip route 0.0.0.0 0.0.0.0 172.16.2.254
 end
