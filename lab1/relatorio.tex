@@ -172,7 +172,7 @@ sede, as redes de uma loja e a do armazém.}
 A Figura~\ref{fig:topologia} mostra a organização dos recursos disponibilizados
 para a implementação da rede proposta. O Script~\ref{verb:gnus} mostra a configuração
 aplicada em cada computador da bancada. No switch e no router as configurações
-aplicadas são mostradas nos Scripts \ref{verb:switch_ports}, \ref{verb:swicth_vlan} \ref{verb:router}.
+aplicadas são mostradas nos Scripts \ref{verb:swicth_vlan}, \ref{verb:switch_ports}, e \ref{verb:router}.
 
 \begin{figure}[htp]
    \begin{center}
@@ -189,15 +189,15 @@ aplicadas são mostradas nos Scripts \ref{verb:switch_ports}, \ref{verb:swicth_v
 \end{program}
 
 \begin{program}
-   \verbatiminput{configure_switch_ports.txt}
-   \caption{Atribuição de portas as VLANs no switch.}
-   \label{verb:switch_ports}
-\end{program}
-
-\begin{program}
    \verbatiminput{configure_switch_vlan.txt}
    \caption{Criação das VLANs no switch.}
    \label{verb:swicth_vlan}
+\end{program}
+
+\begin{program}
+   \verbatiminput{configure_switch_ports.txt}
+   \caption{Atribuição de portas as VLANs no switch.}
+   \label{verb:switch_ports}
 \end{program}
 
 \begin{program}
@@ -215,18 +215,17 @@ externo com conectividade à Internet, ou alternativamente configure um
 servidor com “vistas”).}
 
 Os Scripts \ref{verb:s_co},~\ref{verb:s_op},~\ref{verb:s_dbin} e~\ref{verb:s_dbout}
-mostram as configurações do BIND no modo Views, e a configuração
-slave para o domínio loja1.qquma.pt no servidor central.
+mostram as configurações do BIND, com 2 Views, uma para a rede externa e outra para a rede interna para o domínio qquma.pt. E a configuração do servidor central como slave para o domínio loja1.qquma.pt.
 
 \begin{program}
    \verbatiminput{bind_s/named.conf}
-   \caption{Configuração do servidor central.}
+   \caption{Configuração DNS do servidor central.}
    \label{verb:s_co}
 \end{program}
 
 \begin{program}
    \verbatiminput{bind_s/named.conf.options}
-   \caption{Servidor central trabalha como cache do servidor global.}
+   \caption{Configuração do servidor central DNS do domínio qquma.pt como servidor DNS de cache para o domínio loja1.qquma.pt.}
    \label{verb:s_op}
 \end{program}
 
@@ -247,28 +246,28 @@ coloque o servidor DNS do domínio da empresa como servidor secundário
 (slave) deste.}
 
 Nos Scripts~\ref{verb:l_co},~\ref{verb:l_op} e~\ref{verb:l_db} são
-mostras as configurações aplicadas.
+mostradas as configurações aplicadas para o servidor DNS da loja1.
 
 \begin{program}
    \verbatiminput{bind_l/named.conf.local}
-   \caption{Configuração do servidor da loja1.}
+   \caption{Configurações do servidor DNS da loja1.}
    \label{verb:l_co}
 \end{program}
 
 \begin{program}
    \verbatiminput{bind_l/named.conf.options}
-   \caption{Servidor da loja trabalha como cache do servidor global.}
+   \caption{Configuração do servidor DNS da loja1 para trabalhar como servidor cache do domínio qquma.pt e nomes externos.}
    \label{verb:l_op}
 \end{program}
 
 \begin{program}
    \verbatiminput{bind_l/db.loja1.qquma.pt}
-   \caption{Tabela de endereços para o servidor da loja1.}
+   \caption{Tabela de endereços para o servidor DNS da loja1.}
    \label{verb:l_db}
 \end{program}
 
 \subsection{Na rede do armazém configure o servidor de cache de DNS previsto.}
-O servidor de cache no armazém foi configurado segundo o Script~\ref{verb:a_op}.
+O servidor de cache de DNS no armazém foi configurado segundo o Script~\ref{verb:a_op}.
 
 \begin{program}
    \verbatiminput{bind_a/named.conf.options}
@@ -280,8 +279,7 @@ O servidor de cache no armazém foi configurado segundo o Script~\ref{verb:a_op}
 Apresente o extracto do log demonstrativo do bom funcionamento das
 configurações.}
 
-Abaixo são apresentadas uma série de resposta dos vários servidores
-requisitados por vários clientes da rede.
+Abaixo são apresentadas uma série de respostas, por parte dos 3 servidores de DNS, às requisições das demais máquinas da rede.
 
 \begin{program}
    \verbatiminput{logs/a_s.dig}
