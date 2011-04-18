@@ -1,0 +1,19 @@
+# The loopback interface
+# Interfaces that comes with Debian Potato does not like to see
+# "auto" option before "iface" for the first device specified.   
+iface lo inet loopback
+auto lo
+
+#auto eth0 
+#iface eth0 inet static
+#        address 172.16.2.61
+#        netmask 255.255.255.0
+#        broadcast 172.16.2.255
+#        network 172.16.2.0
+#        gateway 172.16.2.254
+
+auto eth0 
+iface eth0 inet static
+        address 172.16.61.1
+        netmask 255.255.255.0
+        gateway 172.16.61.4

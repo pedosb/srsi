@@ -1,0 +1,19 @@
+ospfd# show ip ospf neighbor 
+
+    Neighbor ID Pri State           Dead Time Address         Interface            RXmtL RqstL DBsmL
+172.16.62.0       2 Full/Backup       38.633s 172.16.62.3     eth1:172.16.62.2         0     0     0
+172.16.62.4       3 Full/DROther      37.197s 172.16.62.4     eth1:172.16.62.2         0     0     0
+ospfd# show ip ospf route    
+============ OSPF network routing table ============
+N    172.16.61.0/24        [20000] area: 0.0.0.0
+                           via 172.16.62.4, eth1
+N    172.16.62.0/24        [10000] area: 0.0.0.0
+                           directly attached to eth1
+
+============ OSPF router routing table =============
+R    172.16.62.4           [10000] area: 0.0.0.0, ASBR
+                           via 172.16.62.4, eth1
+
+============ OSPF external routing table ===========
+N E2 0.0.0.0/0             [10000/1] tag: 1
+                           via 172.16.62.4, eth1

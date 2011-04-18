@@ -1,0 +1,132 @@
+
+Building configuration...
+
+Current configuration : 3222 bytes
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname gnu-rtr6
+!
+boot-start-marker
+boot-end-marker
+!
+! card type command needed for slot/vwic-slot 0/0
+logging message-counter syslog
+logging buffered 51200 warnings
+enable secret 5 $1$u53Q$vBawpP8.1YpCT6ypap1zX.
+!
+no aaa new-model
+dot11 syslog
+ip source-route
+!
+!
+!
+!
+ip cef
+no ip domain lookup
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+crypto pki trustpoint TP-self-signed-3720368843
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3720368843
+ revocation-check none
+ rsakeypair TP-self-signed-3720368843
+!
+!
+crypto pki certificate chain TP-self-signed-3720368843
+ certificate self-signed 01
+  30820240 308201A9 A0030201 02020101 300D0609 2A864886 F70D0101 04050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 33373230 33363838 3433301E 170D3131 30343138 30393137 
+  33375A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 37323033 
+  36383834 3330819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
+  8100BE39 AE211674 614AADFA 9D455D7C 70AC2B27 E3FB7F5D BBEA269D 3491BC13 
+  81B156BE 48EAD1E3 552D4F91 4E5BEC14 5E41811D AE8AB63E EA849519 EDB00F3A 
+  CADE3074 893F5DAC EF518F7F 71B88A58 52AC6B5D 384E9841 5D1D6710 DF09E3A4 
+  5F09A21F 0A038259 FE4D7D63 DFB3AAE5 A51D5E0F 613E00EC 87DB9BDA EFAF7935 
+  B6950203 010001A3 68306630 0F060355 1D130101 FF040530 030101FF 30130603 
+  551D1104 0C300A82 08676E75 2D727472 36301F06 03551D23 04183016 8014A730 
+  7FC3C437 A8ACB19A E081C205 F4A240CF DC72301D 0603551D 0E041604 14A7307F 
+  C3C437A8 ACB19AE0 81C205F4 A240CFDC 72300D06 092A8648 86F70D01 01040500 
+  03818100 51FD734E 6FBADCA6 F6DFB6BA 7A0A0A4A A186A856 C210B73F 8A26DD47 
+  2B93BC27 17DAF816 F05059A8 1BAD58AF AC538C75 0AEC67A0 60793921 004F0EDA 
+  FD5C4AE8 1490F09D BF21B80A D8EBB984 3DF599E4 D36D252F D52BE771 FB75F04C 
+  414F2F12 1537198D 8A3612B0 2FFC657F 8BF6744F AC40622A E0215DCD 2A11DB6A 900EDA74
+  	quit
+!
+!
+username root privilege 15 secret 5 $1$8AFR$bNAYevxPFjXFExpnZI2fj.
+username cisco password 7 02050D680809
+archive
+ log config
+  hidekeys
+! 
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ description $ETH-LAN$$ETH-SW-LAUNCH$$INTF-INFO-FE 0$
+ ip address 172.16.61.4 255.255.255.0
+ ip ospf priority 3
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1
+ ip address 172.16.62.4 255.255.255.0
+ ip ospf priority 3
+ duplex auto
+ speed auto
+!
+router ospf 1
+ log-adjacency-changes
+ auto-cost reference-bandwidth 1000000
+ network 172.16.61.0 0.0.0.255 area 0.0.0.0
+ network 172.16.62.0 0.0.0.255 area 0.0.0.0
+ default-information originate always
+!
+ip forward-protocol nd
+ip http server
+ip http access-class 23
+ip http authentication local
+ip http secure-server
+ip http timeout-policy idle 60 life 86400 requests 10000
+!
+!
+!
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+line con 0
+ login local
+line aux 0
+line vty 0 4
+ access-class 23 in
+ privilege level 15
+ login local
+ transport input telnet ssh
+line vty 5 15
+ access-class 23 in
+ privilege level 15
+ login local
+ transport input telnet ssh
+!
+scheduler allocate 20000 1000
+end

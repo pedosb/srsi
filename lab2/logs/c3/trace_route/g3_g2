@@ -1,0 +1,2 @@
+traceroute to 172.16.62.2 (172.16.62.2), 30 hops max, 40 byte packets
+ 1   (172.16.62.2)  0.203 ms  0.150 ms  0.100 ms

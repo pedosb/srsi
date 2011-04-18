@@ -1,0 +1,18 @@
+gnu-rtr6#show ip ospf neighbor 
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+172.16.62.0       1   FULL/BDR        00:00:38    172.16.62.3     FastEthernet0/1
+172.16.62.2       1   FULL/DROTHER    00:00:38    172.16.62.2     FastEthernet0/1
+172.16.61.1       1   FULL/BDR        00:00:34    172.16.61.1     FastEthernet0/0
+172.16.62.2       1   FULL/DROTHER    00:00:34    172.16.61.2     FastEthernet0/0
+gnu-rtr6#show ip ospf route    
+
+            OSPF Router with ID (172.16.62.4) (Process ID 1)
+
+    Area BACKBONE(0.0.0.0)
+
+    Intra-area Route List
+*   172.16.62.0/24, Intra, cost 1000, area 0.0.0.0, Connected
+      via 172.16.62.4, FastEthernet0/1
+*   172.16.61.0/24, Intra, cost 1000, area 0.0.0.0, Connected
+      via 172.16.61.4, FastEthernet0/0
