@@ -25,13 +25,13 @@ Interior Routing }
 \maketitle
 
 \section{Topologia}
-A topologia de rede implementada foi exatamente igual a proposta do relatório. Esta é mostrada na Figura~\ref{fig:topologia}.
+A topologia de rede implementada foi exatamente igual à proposta do relatório. Esta é mostrada na Figura~\ref{fig:topologia}.
 
 \begin{figure}[htp]
 	\begin{center}
 		\includegraphics[height=4in]{topologia}
 	\end{center}
-	\caption{Topologia de rede impelementada.}
+	\caption{Topologia de rede implementada.}
 	\label{fig:topologia}
 \end{figure}
 
@@ -39,19 +39,44 @@ A topologia de rede implementada foi exatamente igual a proposta do relatório. 
 
 \section{Análise de Tráfego}
 
-	Com o objectivo de capturar o tráfego completo da rede configurámos as capacidades Switched Port Analyzer (SPAN) do switch. Esta configuração permitiu que uma porta do switch servisse para receber dados de monitorização de todo o tráfego da rede, independentemente da VLAN em que os pacotes surjam.
+	Com o objectivo de capturar o tráfego completo da rede configurámos as capacidades Switched Port Analyzer (SPAN) do switch. Esta configuração permitiu que uma porta do switch servisse para receber dados de monitorização de todo o tráfego da rede, independentemente da VLAN em que os pacotes surgiram.
 
+	Como se pode ver pela Figura~\ref{fig:cenario1-inicio1}, quando o serviço OSPF da máquina GNU61 iniciou o seu funcionamento enviou automaticamente mensagens ``Hello Packet'' em broadcast. Este tipo de pacotes serve para verificar se os serviços OSPF perdem ligação uns com os outros. Ou como neste caso, verificar a presença de novos serviços OSPF na rede. 
 
-%PSB: comentei pra poder compilar
-%	\begin{figure}[htp]
-%   	\begin{center}
-%	 		\includegraphics[height=300pt]{}
-%		\end{center}
-%		\caption{}
-%		\label{fig:}
-%	\end{figure}
+	O router da Cisco ao receber o pacote anterior, responde directamente ao GNU61 com um outro ``Hello Packet''. Após o qual existiu transferência das bases de dados da topologia de rede entre os dois serviços através de pacotes ``DB Description''.
+
+	Já na Figura~\ref{fig:cenario1-inicio2} podemos observar os pedidos ``LS Request'' provenientes do GNU61 e dirigidos para o router. Estes pedidos servem para requerer ao serviço OSPF vizinho uma actualização de partes da base de dados topológica. A resposta foi dada directamente e por broadcast via mensagens ``LS Update''. E por fim, o GNU61 sinalizou que recebimento dessa informação através de pacotes ``LS Acknowledge''.
+
+	Á medida que adicionámos sucessivamente mais serviços OSPF à rede foi possível constatar o mesmo padrão de actuação do protocolo OSPF do exemplo anterior. Ou seja, verificou-se que a comunicação da informação topológica entre todas as máquinas foi realizada através do mesmo tipo de pacotes descritos anteriormente. A única diferença, foi a existência de mais mensagens trocadas fruto da existência de um maior número de servidores OSPF.
+
+	Na Figura~\ref{fig:cenario1-fim} verificou-se que após ter sido transmitida toda a informação topológica entre os routers existiu apenas a transmissão de pacotes ``Hello Packet''. Uma vez que todos os routers tinham toda a informação necessária sobre a rotas -``Link-State''. E com esta informação podem aplicar localmente o algoritmo de Dijkstra para o cálculo do caminho mais curto sem recorrer a outros routers.
+
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=6in]{cenario1-inicio1}
+	\end{center}
+	\caption{Tráfego interceptado entre os serviços de OSPF em funcionamento no router após ter sido iniciado e o GNU61 (Cenário 1).}
+	\label{fig:cenario1-inicio1}
+\end{figure}
+
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=6in]{cenario1-inicio2}
+	\end{center}
+	\caption{Continuação do tráfego interceptado entre o serviço OSPF do router e do recém iniciado serviço no GNU61.}
+	\label{fig:cenario1-inicio2}
+\end{figure}
+
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=6in]{cenario1-inicio1}
+	\end{center}
+	\caption{Tráfego interceptado a partir do momento em que toda a informação da rede ficou sincronizada em todos os serviços de OSPF da rede.}
+	\label{fig:cernario1-fim}
+\end{figure}
 
 \section{Arquivos de log}
+
 Na pasta logs anexada a este arquivo, podemos encontrar os logs e arquivos de
 configuração capturados. Para este assumimos a seguinte convenção \verb gX  para
 os Gnus (\verb X  representa o respectivo Gnu), \verb r6  para o router cisco, e
