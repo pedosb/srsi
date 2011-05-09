@@ -9,6 +9,7 @@
 \usepackage{graphicx}
 \usepackage{longtable}
 \usepackage{verbatim}
+\usepackage{url}
 
 \usepackage{float}
 \floatstyle{ruled}
@@ -47,7 +48,7 @@ A topologia de rede implementada foi exatamente igual à proposta do relatório.
 
 \section{Análise de Tráfego}
 
-	Com o objectivo de capturar o tráfego completo da rede configurámos as capacidades Switched Port Analyzer (SPAN) do switch. Esta configuração permitiu que uma porta do switch servisse para receber dados de monitorização de todo o tráfego da rede, independentemente da VLAN em que os pacotes surgiram.
+	Com o objectivo de capturar o tráfego completo da rede configurámos as capacidades Switched Port Analyzer (SPAN) do switch \cite{website:cisco-span}. Esta configuração permitiu que uma porta do switch servisse para receber dados de monitorização de todo o tráfego da rede, independentemente da VLAN em que os pacotes surgiram.
 
 	Como se pode ver pela Figura~\ref{fig:cenario1-inicio1}, quando o serviço OSPF da máquina GNU61 iniciou o seu funcionamento enviou automaticamente mensagens ``Hello Packet'' em broadcast. Este tipo de pacotes serve para verificar se os serviços OSPF perdem ligação uns com os outros. Ou como neste caso, verificar a presença de novos serviços OSPF na rede. 
 
@@ -121,9 +122,7 @@ sistema. Abaixo detalhamos os arquivos de cada pasta.
 		\end{description}
 \end{itemize}
 
-
-\section{Referências}
-
-SPAN: \url{http://www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a008015c612.shtml#terms}
+\bibliographystyle{alpha}
+\bibliography{referencias}
 
 \end{document}
