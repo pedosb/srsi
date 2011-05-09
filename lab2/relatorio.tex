@@ -37,6 +37,14 @@ A topologia de rede implementada foi exatamente igual à proposta do relatório.
 
 \section{Cenários}
 
+	De acordo com o especificado no trabalho foram implementados e estudados 3 cenários distintos. Para cada um deles foram executados os vários testes pedidos, para além de análise de tráfego e geração de ficheiros de logs, que serão explicados nas secções seguintes.
+		
+	O primeiro cenário consiste numa implementação simples da topologia referida acima, sem forçar custos por rota nem designações de DR/BDR. Para este cenário apenas era pedido que fosse verificada a conexão entre os vários GNUs, para além de análise de tráfego e logs do zebra e ospf, sendo obtidos os resultados esperados.
+			
+	No segundo cenário foi novamente respeitada a topologia referida acima, tendo apenas sido forçado o DR para o GNU62 e o BDR para o router em cada uma das redes. Também foram modificadas as configurações de BW, de forma a que o caminho entre o GNU61 e o GNU63 tivesse o mesmo custo quer passasse pelo GNU62 ou pelo router. Para além dos testes referidos no cenário anterior foram também efectuados vários trace routes para verificar o caminho dos pacotes por cada ligação, especialmente na ligação entre o GNU61 e o GNU63, onde se verificou que foram escolhidos os dois caminhos possíveis. Todos os testes e dados recolhidos neste cenário corresponderam ao esperado.
+				
+	No terceiro e último cenário foi mudada a topologia da rede, tendo sido eliminada a ligação da eth0 do GNU62 à switch, tendo assim o tráfego entre o GNU61 e o GNU62 terá sempre de passar pela porta eth1 do GNU62 e fica a sobrar apenas um caminho entre o GNU61 e o GNU63. Os testes efectuados foram os mesmos que no cenário anterior, verificando-se novamente os resultados esperados.
+
 \section{Análise de Tráfego}
 
 	Com o objectivo de capturar o tráfego completo da rede configurámos as capacidades Switched Port Analyzer (SPAN) do switch. Esta configuração permitiu que uma porta do switch servisse para receber dados de monitorização de todo o tráfego da rede, independentemente da VLAN em que os pacotes surgiram.
