@@ -1,0 +1,26 @@
+configure terminal
+interface FastEthernet0/1
+ switchport access vlan 11
+ switchport mode access
+exit
+interface FastEthernet0/2
+ switchport access vlan 11
+ switchport mode access
+exit
+interface FastEthernet0/3
+ switchport access vlan 12
+ switchport mode access
+exit
+interface FastEthernet0/4
+ switchport access vlan 12
+ switchport mode access
+exit
+interface FastEthernet0/23
+ switchport access vlan 11
+ switchport mode access
+exit
+interface FastEthernet0/24
+ switchport access vlan 12
+ switchport mode access
+exit
+exit
