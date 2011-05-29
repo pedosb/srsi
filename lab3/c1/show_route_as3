@@ -1,0 +1,40 @@
+gnu-rtr3#show ip route
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     172.16.0.0/24 is subnetted, 8 subnets
+B       172.16.61.0 [20/0] via 192.168.1.146, 00:19:30
+B       172.16.62.0 [20/0] via 192.168.1.146, 00:19:30
+C       172.16.32.0 is directly connected, FastEthernet0/1
+C       172.16.31.0 is directly connected, FastEthernet0/0
+B       172.16.21.0 [20/0] via 192.168.1.53, 00:14:25
+B       172.16.22.0 [20/0] via 192.168.1.53, 00:14:25
+B       172.16.12.0 [20/0] via 192.168.1.53, 00:29:59
+B       172.16.11.0 [20/0] via 192.168.1.53, 00:29:59
+     192.168.1.0/30 is subnetted, 2 subnets
+C       192.168.1.52 is directly connected, Serial0/0/0:0
+C       192.168.1.144 is directly connected, Serial0/0/1:0
+gnu-rtr3#show ip bgp
+BGP table version is 55, local router ID is 192.168.1.145
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*> 172.16.11.0/24   192.168.1.53             0         10000 1 i
+*> 172.16.12.0/24   192.168.1.53             0         10000 1 i
+*  172.16.21.0/24   192.168.1.146                      10000 6 2 i
+*>                  192.168.1.53                       10000 1 2 i
+*  172.16.22.0/24   192.168.1.146                      10000 6 2 i
+*>                  192.168.1.53                       10000 1 2 i
+*> 172.16.31.0/24   0.0.0.0                  0         32768 i
+*> 172.16.32.0/24   0.0.0.0                  0         32768 i
+*> 172.16.61.0/24   192.168.1.146            0         10000 6 i
+*> 172.16.62.0/24   192.168.1.146            0         10000 6 i
