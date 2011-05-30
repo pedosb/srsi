@@ -11,10 +11,13 @@
 \usepackage{verbatim}
 \usepackage{url}
 
+\usepackage{morefloats}
 \usepackage{float}
 \floatstyle{ruled}
 \newfloat{program}{thp}{lop}
-\floatname{program}{Script}
+\floatname{program}{Log}
+\newfloat{config}{thp}{lop}
+\floatname{config}{Configuração}
 
 \title{Serviços de Rede e de Sistema \\
 Exterior Routing }
@@ -46,9 +49,11 @@ bem como o seu endereçamento.
 	\label{fig:topologia}
 \end{figure}
 
+\newpage
+
 \section{Cenários}
 
-Após termos configurado a rede tal como descrito anteriorment, estudámos o comportamento 
+Após termos configurado a rede tal como descrito anteriormente, estudámos o comportamento 
 da rede em dois cenários diferentes. No primeiro cenário foi analizado o comportamento 
 da rede quando cada ABR dá a mesma importância aos seus vizinhos directos.
 Já no segundo caso, verificámos como é que o protocolo BGP funciona quando atribuímos
@@ -57,80 +62,128 @@ prioridade aos vizinhos com maior número identificador do AS.
 
 \section{Análise de Tráfego}
 
-No primeiro cenário do trabalho, procedemos de forma incremental. Acrescentando,
-progressivamente os routers à rede BGP. Isto permitiu perceber melhor o
-funcionamento do protocolo BGP, cujo o funcionamento poderia ser mais díficil 
-entender caso não o fizessemos.
+Em primeiro lugar observou-se o correcto funcionamento do protocolo BGP. 
+Sempre que um ABR entrou no sistema, o protocolo BGP permitiu a deteção
+dessa nova entrada pelos restantes ABR. E, consequentemente, verificou-se 
+a actualização de todas as tabelas de roteamento de todos os ABR.
 
-Se não tivessemos analizado de forma incremental a adição dos routers no protocolo
-BGP poderíamos ter sido induzidos em erro e pensar que estaria a existir algum
-problema com a nossa configuração. Uma vez que poderíamos pensar que todos os
-ABR teriam de ter dois caminhos para cada outro vizinho do protocolo BGP. 
-Ora, isto não é verdade como pode ser verificado pelos logs.
+Após a configuração de toda a rede e tal como os registos do cenário 1 
+podem comprovar. Os ABR que estão diagonalmente opostos, dispõem sempre de 
+duas rotas entre si com um mesmo custo.
 
-Em qualquer um dos cenários existiram sempre dois routers que continham duas
-rotas para cada ABR e outros dois routers em que todas as suas rotas eram únicas.
-Isto é, estes routers não tinham rotas alternativas para os outros ABR.
+Ainda no cenário 1, podemos verificar que os ABR nunca escolhem a rota mais
+longa para ligarem-se aos ABR que são vizinhos directos.
 
-O procedimento efectuado para descobrir isto foi: 
-\begin{enumerate}
-	\item Ligação do ABR do AS001 com o do AS002.
-	\item Ligação do ABR do AS003 com o do AS006.
-	\item Ligação do ABR do AS002 e AS006.
-	\item E finalmente, a ligação do ABR do AS001 e AS003.
-\end{enumerate}
+Por último, e como se pode verificar pelos registos do cenário 2,
+os ABR dão sempre prioridade às rotas com maior peso. A título de exemplo, o 
+ABR do AS003 dá sempre preferência ao ABR da AS006 para os ABR AS003 e AS006.
 
-Assim foi possível constatar que as primeiras 3 etapas tiveram a adição das
-rotas esperadas em cada um dos ABR. No entanto, os efeito de termos completado
-um ciclo na quarta etapa não obteve o resultado que estávamos à espera.
-Nomeadamente, a da existência de duas rotas alternativas em cada ABR para cada um
-dos outros ABR.
+Os registos das rotas e \verb traceroute  associados a estas afirmações encontram-se
+em anexo.
 
-Quando foi adicionada esta última ligação, os ABR das AS003 e AS006, permaneceram
-na obscuridade acerca da existência desta ligação. Este comportamento visa,
-provavelmente, evitar a existência de ciclos no protocolo.
+\begin{program}
+	\verbatiminput{c1/show_route_as1}
+  \caption{Rotas do ABR do AS 001 no primeiro cenário.}
+\end{program}
 
-OU SERÁ QUE TERÁ A VER COM A NÃO EXISTÊNCIA DE PROPAGAÇÂO DAS ROTAS POR TODOS?
+\begin{program}
+	\verbatiminput{c1/traceroute_as1}
+  \caption{Traceroutes do ABR do AS 001 no primeiro cenário.}
+\end{program}
 
-\section{Arquivos de log}
+\begin{program}
+	\verbatiminput{c1/show_route_as2}
+  \caption{Rotas do ABR do AS 002 no primeiro cenário.}
+\end{program}
 
-Na pasta logs anexada a este arquivo, podemos encontrar os logs e arquivos de
-configuração capturados. Para este assumimos a seguinte convenção \verb gX  para
-os Gnus (\verb X  representa o respectivo Gnu), \verb r6  para o router cisco, e
-\verb s6  para o switch cisco. As pastas \verb logs/cY  representas os três
-cenários indicados no guia (\verb Y  varia de 1 a 3 representando os cenários).
-Já as pastas \verb logs/cY/trace_route  como o nome indica representa o
-trace route de todos os componentes para todos os outros do sistema. Finalmente
-as pastas \verb logs/conf/{gX,r6,s6}  mostram as configurações efetuadas no
-sistema. Abaixo detalhamos os arquivos de cada pasta.
+\begin{program}
+	\verbatiminput{c1/traceroute_as2}
+  \caption{Traceroutes do ABR do AS 002 no primeiro cenário.}
+\end{program}
 
-\begin{itemize}
-	\item Para os logs em \verb-logs/cY-
-		\begin{description}
-			\item \verb *\_zebra  Representa o comando \verb-show ip route-.
-			\item \verb *\_ospf  Representa o comando \verb-show ip ospf neighbor-.
-		\end{description}
-	\item Para os trace routes em \verb-logs/cY/trace_route-
-		\begin{description}
-			\item \verb {gX,r6}_{gX,r6}[.{61,62}]  Representa o trace route do
-				elemento anterior ao \verb _  para o elemento posterior. A parte
-				opicional que contém o \verb .  ilustra para o caso do \verb g2  e
-				\verb r6  ondo o trace route pode ser feito a rede \verb 61  ou \verb 62 .
-		\end{description}
-	\item Para as configurações em \verb-logs/confs/gX-
-		\begin{description}
-			\item[zebra.conf] Apresenta a configuração do zebra no respectivo
-				gnu.
-			\item[ospfd.conf] Apresenta a configuração ospf no respectivo gnu.
-		\end{description}
-	\item Para as configurações em \verb-logs/confs/{r6,s6}-
-		\begin{description}
-			\item[running-config] Apresenta a configuração do router ou switch
-				gerada com o comando \verb_show running-config_.
-		\end{description}
-\end{itemize}
+\begin{program}
+	\verbatiminput{c1/show_route_as3}
+  \caption{Rotas do ABR do AS 003 no primeiro cenário.}
+\end{program}
 
-%\bibliographystyle{alpha}
-%\bibliography{referencias}
+\begin{program}
+	\verbatiminput{c1/traceroute_as3}
+  \caption{Traceroutes do ABR do AS 003 no primeiro cenário.}
+\end{program}
+
+\begin{program}
+	\verbatiminput{c1/show_route_as6}
+  \caption{Rotas do ABR do AS 006 no primeiro cenário.}
+\end{program}
+
+\begin{program}
+	\verbatiminput{c1/traceroute_as6}
+  \caption{Traceroutes do ABR do AS 006 no primeiro cenário.}
+\end{program}
+
+\begin{program}
+	\verbatiminput{c3/show_route_as1}
+  \caption{Rotas do ABR do AS 001 no segundo cenário.}
+\end{program}
+
+\begin{program}
+	\verbatiminput{c3/traceroute_as1}
+  \caption{Traceroutes do ABR do AS 001 no segundo cenário.}
+\end{program}
+
+\begin{program}
+	\verbatiminput{c3/show_route_as2}
+  \caption{Rotas do ABR do AS 002 no segundo cenário.}
+\end{program}
+
+\begin{program}
+	\verbatiminput{c3/traceroute_as2}
+  \caption{Traceroutes do ABR do AS 002 no segundo cenário.}
+\end{program}
+
+\begin{program}
+	\verbatiminput{c3/show_route_as3}
+  \caption{Rotas do ABR do AS 003 no segundo cenário.}
+\end{program}
+
+\begin{program}
+	\verbatiminput{c3/traceroute_as3}
+  \caption{Traceroutes do ABR do AS 003 no segundo cenário.}
+\end{program}
+
+\begin{program}
+	\verbatiminput{c3/show_route_as6}
+  \caption{Rotas do ABR do AS 006 no segundo cenário.}
+\end{program}
+
+\begin{program}
+	\verbatiminput{c3/traceroute_as6}
+  \caption{Traceroutes do ABR do AS 006 no segundo cenário.}
+\end{program}
+
+\begin{config}
+	\verbatiminput{conf_bgp/conf}
+	\caption{Configurações gerais para todos os ABR.}
+\end{config}
+
+\begin{config}
+	\verbatiminput{conf_bgp/conf_as001}
+	\caption{Configurações BGP para ABR do AS 001.}
+\end{config}
+
+\begin{config}
+	\verbatiminput{conf_bgp/conf_as002}
+	\caption{Configurações BGP para ABR do AS 002.}
+\end{config}
+
+\begin{config}
+	\verbatiminput{conf_bgp/conf_as003}
+	\caption{Configurações BGP para ABR do AS 003.}
+\end{config}
+
+\begin{config}
+	\verbatiminput{conf_bgp/conf_as006}
+	\caption{Configurações BGP para ABR do AS 006.}
+\end{config}
 
 \end{document}
