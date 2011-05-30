@@ -1,0 +1,25 @@
+% Configuração para AS002
+configure terminal
+ interface serial 0/0/0:0
+  ip address 192.168.1.50 255.255.255.252
+ exit
+ interface serial 0/0/1:0
+  ip address 192.168.1.105 255.255.255.252
+ exit
+ router bgp 002
+  network 172.16.21.0 mask 255.255.255.0
+  network 172.16.22.0 mask 255.255.255.0
+  neighbor 192.168.1.49 remote-as 001
+  neighbor 192.168.1.106 remote-as 006
+  neighbor 192.168.1.49 weight 10000
+  neighbor 192.168.1.106 weight 10000
+ exit
+exit
+
+% Mudança para cenário 2
+% Configuração para AS002
+configure terminal
+ router bgp 002
+  neighbor 192.168.1.106 weight 20000
+ exit
+exit

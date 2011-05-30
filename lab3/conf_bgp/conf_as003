@@ -1,0 +1,26 @@
+% Configuração para AS003
+configure terminal
+ interface serial 0/0/0:0
+  ip address 192.168.1.54 255.255.255.252
+ exit
+ interface serial 0/0/1:0
+  ip address 192.168.1.145 255.255.255.252
+ exit
+ router bgp 003
+  network 172.16.31.0 mask 255.255.255.0
+  network 172.16.32.0 mask 255.255.255.0
+  neighbor 192.168.1.53 remote-as 001
+  neighbor 192.168.1.146 remote-as 006
+  neighbor 192.168.1.53 weight 10000
+  neighbor 192.168.1.146 weight 10000
+ exit
+exit
+
+% Mudança para cenário 2
+% Configuração para AS003
+configure terminal
+ router bgp 003
+  neighbor 192.168.1.146 weight 20000
+ exit
+exit
+
