@@ -1,0 +1,27 @@
+gnu61:~/srsi/lab4# dig @192.168.109.2 bancada6.netlab.fe.up.pt mx
+
+; <<>> DiG 9.6-ESV-R4 <<>> @192.168.109.2 bancada6.netlab.fe.up.pt mx
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 54107
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 2, ADDITIONAL: 2
+
+;; QUESTION SECTION:
+;bancada6.netlab.fe.up.pt.      IN      MX
+
+;; ANSWER SECTION:
+bancada6.netlab.fe.up.pt. 604800 IN     MX      10 gnu63.netlab.fe.up.pt.
+
+;; AUTHORITY SECTION:
+bancada6.netlab.fe.up.pt. 604800 IN     NS      ns1.fe.up.pt.
+bancada6.netlab.fe.up.pt. 604800 IN     NS      ns.
+
+;; ADDITIONAL SECTION:
+ns1.fe.up.pt.           63989   IN      A       193.136.28.10
+ns1.fe.up.pt.           63989   IN      AAAA    2001:690:2200:9a01::10
+
+;; Query time: 1 msec
+;; SERVER: 192.168.109.2#53(192.168.109.2)
+;; WHEN: Thu Jun  9 23:17:18 2011
+;; MSG SIZE  rcvd: 142

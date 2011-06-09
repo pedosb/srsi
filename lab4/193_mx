@@ -1,0 +1,19 @@
+gnu61:~/srsi/lab4# dig @193.136.28.10 bancada6.netlab.fe.up.pt mx
+
+; <<>> DiG 9.6-ESV-R4 <<>> @193.136.28.10 bancada6.netlab.fe.up.pt mx
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 18335
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;bancada6.netlab.fe.up.pt.      IN      MX
+
+;; AUTHORITY SECTION:
+netlab.fe.up.pt.        604800  IN      SOA     ns.netlab.fe.up.pt. nfr.fe.up.pt. 2009011216 604800 86400 2419200 604800
+
+;; Query time: 2 msec
+;; SERVER: 193.136.28.10#53(193.136.28.10)
+;; WHEN: Fri Jun 10 00:31:10 2011
+;; MSG SIZE  rcvd: 85

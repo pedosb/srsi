@@ -1,0 +1,16 @@
+gnu61:~/srsi/lab4# dig @192.168.109.2 gnu63.netlab.fe.up.pt a
+
+; <<>> DiG 9.6-ESV-R4 <<>> @192.168.109.2 gnu63.netlab.fe.up.pt a
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: SERVFAIL, id: 17819
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;gnu63.netlab.fe.up.pt.         IN      A
+
+;; Query time: 1 msec
+;; SERVER: 192.168.109.2#53(192.168.109.2)
+;; WHEN: Thu Jun  9 23:16:52 2011
+;; MSG SIZE  rcvd: 39

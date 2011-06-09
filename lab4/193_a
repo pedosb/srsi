@@ -1,0 +1,30 @@
+gnu61:~/srsi/lab4# dig @193.136.28.10 gnu63.netlab.fe.up.pt a
+
+; <<>> DiG 9.6-ESV-R4 <<>> @193.136.28.10 gnu63.netlab.fe.up.pt a
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 59056
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 3, ADDITIONAL: 4
+
+;; QUESTION SECTION:
+;gnu63.netlab.fe.up.pt.         IN      A
+
+;; ANSWER SECTION:
+gnu63.netlab.fe.up.pt.  604800  IN      A       172.16.2.63
+
+;; AUTHORITY SECTION:
+netlab.fe.up.pt.        604800  IN      NS      ribeira.fe.up.pt.
+netlab.fe.up.pt.        604800  IN      NS      ns.netlab.fe.up.pt.
+netlab.fe.up.pt.        604800  IN      NS      ns1.fe.up.pt.
+
+;; ADDITIONAL SECTION:
+ns.netlab.fe.up.pt.     604800  IN      A       192.168.109.1
+ns1.fe.up.pt.           86400   IN      A       193.136.28.10
+ns1.fe.up.pt.           86400   IN      AAAA    2001:690:2200:9a01::10
+ribeira.fe.up.pt.       86400   IN      A       192.168.107.6
+
+;; Query time: 2 msec
+;; SERVER: 193.136.28.10#53(193.136.28.10)
+;; WHEN: Thu Jun  9 23:56:33 2011
+;; MSG SIZE  rcvd: 188
