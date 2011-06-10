@@ -1,0 +1,7 @@
+myhostname = g54
+myorigin = b5.psb.com
+mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128 172.16.50.0/24
+inet_interfaces = all
+
+relay_domains = b5.psb.com
+transport_maps = hash:/etc/postfix/transport
