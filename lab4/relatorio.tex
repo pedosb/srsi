@@ -140,8 +140,17 @@ A sessões encontram-se organizadas como se segue:
 \section{Análise de resultados}
 
 
-\section{Conclusões}
-SSL: encriptacao + overhead
-IMAP: + rapido?
+\section{Conclusão}
+
+Neste trabalho foi possível comprovar a utilização do protocolo SMTP no 
+envio de e-mails para o serviço Postfix. E, quase em simultâneo, verificar 
+a utilização dos protocolos POP3 e IMAP no download de e-mails do 
+serviço Postfix.
+Também observámos a forma como os diversos serviços de SMTP colaboram na
+troca de mensagens por forma às mesmas chegarem ao destino apropriado.
+Adicionalmente, podemos observar através das capturas do Wireshark, que
+quando o protocolo POP3 ou IMAP são utilizados sobre SSL, todas as
+mensagens trocadas com o serviço Postfix são encriptadas. O que provoca
+um overhead na comunicação entre Postfix e cliente de e-mail.
 
 \end{document}
