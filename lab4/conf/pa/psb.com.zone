@@ -1,0 +1,27 @@
+$TTL 604800
+@       IN      SOA     psb.com. root.psb.com.  (
+                                      20112623 	 ; Serial
+                                      28800      ; Refresh
+                                      14400      ; Retry
+                                      604800     ; Expire - 1 week
+                                      86400 )    ; Minimum
+@	IN	A	172.16.60.5
+@	IN	A	172.16.50.5
+@	IN	NS	ns.psb.com.
+ns	IN	A	172.16.60.5
+;-----------Bancada 6------------------
+b6	IN	MX	1	g63.psb.com.
+g63	IN	A	172.16.2.63
+g63	IN	A	172.16.60.3
+smtp.b6	IN	CNAME	g61.psb.com.
+pop3.b6	IN	CNAME	g61.psb.com.
+imap.b6	IN	CNAME	g61.psb.com.
+g61	IN	A	172.16.60.1
+;-----------Bancada 5------------------
+b5	IN	MX	2	g54.psb.com.
+g54	IN	A	172.16.2.54
+g54	IN	A	172.16.50.4
+smtp.b5	IN	CNAME	g53.psb.com.
+pop3.b5	IN	CNAME	g53.psb.com.
+imap.b5	IN	CNAME	g53.psb.com.
+g53	IN	A	172.16.50.3
