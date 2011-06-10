@@ -10,8 +10,8 @@
 \usepackage{longtable}
 \usepackage{verbatim}
 \usepackage{url}
-
 \usepackage{morefloats}
+
 \usepackage{float}
 \floatstyle{ruled}
 \newfloat{program}{thp}{lop}
@@ -46,12 +46,14 @@ Estas afirmações podem ser confirmadas pelos logs \ref{log:carvoeiromx},
 \ref{log:carvoeiroa}, \ref{log:193a}, \ref{log:193mx}, \ref{log:172mx}
 e \ref{log:172a}.
 
-Embora a topologia implementada ter sido diferente do guião achámos que é
-não alterou signitivamente o trabalho proposto.
+Embora a topologia implementada ter sido diferente do guião achámos que a
+topologia não foi alterada signitivamente face ao trabalho proposto.
 
 O trabalho realizado diferiu, essencialmente, em dois aspectos. No primeiro,
 com o facto das os computadores estarem ligados directamente ao mesmo
-switch. E em segundo, pelo domínio configurado ter sido o \emph{psb.com}.
+switch. E em segundo, pelo domínio \emph{psb.com} ter sido configurado
+numa máquina que chamámos de ``pa'' e que serviu como cliente
+pop3 e imap.
 
 \begin{figure}[htp]
 	\begin{center}
@@ -74,12 +76,6 @@ switch. E em segundo, pelo domínio configurado ter sido o \emph{psb.com}.
 \end{program}
 
 \begin{program}
-	\verbatiminput{172_mx}
-  \caption{Pergunta à máquina 172.16.2.2 sobre o registo MX da bancada6.}
-	\label{log:172mx}
-\end{program}
-
-\begin{program}
 	\verbatiminput{193_mx}
   \caption{Pergunta à máquina 193.136.28.10 sobre o registo MX da bancada6.}
 	\label{log:193mx}
@@ -92,9 +88,48 @@ switch. E em segundo, pelo domínio configurado ter sido o \emph{psb.com}.
 \end{program}
 
 \begin{program}
+	\verbatiminput{172_mx}
+  \caption{Pergunta à máquina 172.16.2.2 sobre o registo MX da bancada6.}
+	\label{log:172mx}
+\end{program}
+
+\begin{program}
 	\verbatiminput{172_a}
   \caption{Pergunta à máquina 172.16.2.2 sobre o registo do GNU63.}
 	\label{log:172a}
 \end{program}
+
+
+\section{Configurações}
+
+
+
+\section{Registo de Logs}
+
+Com o objectivo de registar o tráfego completo da rede configurámos uma porta
+do switch como uma porta SPAN (Switched Port Analyzer) por forma a escutar todo
+o tráfego da rede no Wireshark.
+Uma vez que se tratam de arquivos de grande dimensão decidímos anexar ao 
+relatório um arquivo com todos estes registos. No entanto, eles estão organizados
+em sessões como se segue:
+
+\begin{itemize}
+	\item Sessão 1 - Tráfego de SMTP dentro da bancada 6.
+	\item Sessão 2 - Tráfego de SMTP da bancada 6 para a bancada 5.
+	\item Sessão 3.1 - Tráfego POP3.
+	\item Sessão 3.2 - Tráfego POP3 SSL.
+	\item Sessão 4.1 - Tráfego IMAP.
+	\item Sessão 4.2 - Tráfego IMAP SSL.
+	\item Sessão 5.1 - Mail do user1 da bancada 6 para o user2 da bancada 6.
+	\item Sessão 5.2 - Mail do user2 da bancada 6 para o netedu da bancada 6.
+	\item Sessão 5.3 - Mail do netedu da bancada 6 para o user1 da bancada 6.
+	\item Sessão 5.4 - Mail do user1 da bancada 5 para o user1 da bancada 6.
+	\item Sessão 5.5 - Mail do user1 da bancada 5 para o user2 da bancada 6.
+	\item Sessão 5.6 - Mail do user1 da bancada 5 para o netedu da bancada 6.
+\end{itemize}
+
+\section{Conclusões}
+SSL: encriptacao + overhead
+IMAP: + rapido?
 
 \end{document}

@@ -11,7 +11,8 @@ gnu61:~/srsi/lab4# dig @193.136.28.10 bancada6.netlab.fe.up.pt mx
 ;bancada6.netlab.fe.up.pt.      IN      MX
 
 ;; AUTHORITY SECTION:
-netlab.fe.up.pt.        604800  IN      SOA     ns.netlab.fe.up.pt. nfr.fe.up.pt. 2009011216 604800 86400 2419200 604800
+netlab.fe.up.pt.        604800  IN      SOA     ns.netlab.fe.up.pt. 
+nfr.fe.up.pt. 2009011216 604800 86400 2419200 604800
 
 ;; Query time: 2 msec
 ;; SERVER: 193.136.28.10#53(193.136.28.10)
