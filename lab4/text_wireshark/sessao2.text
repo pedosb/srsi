@@ -1,0 +1,221 @@
+No.     Time        Source                Destination           Protocol Info
+76 4.657176    172.16.60.5           172.16.60.1           TCP      56677 > smtp [SYN] Seq=0 Win=14600 Len=0 MSS=1460 SACK_PERM=1 TSV=47883929 TSER=0 WS=7
+77 4.657181    172.16.60.5           172.16.60.1           TCP      56677 > smtp [SYN] Seq=0 Win=14600 Len=0 MSS=1460 SACK_PERM=1 TSV=47883929 TSER=0 WS=7
+78 4.657347    172.16.60.1           172.16.60.5           TCP      smtp > 56677 [SYN, ACK] Seq=0 Ack=1 Win=5792 Len=0 MSS=1460 SACK_PERM=1 TSV=12440004 TSER=47883929 WS=5
+79 4.657351    172.16.60.1           172.16.60.5           TCP      smtp > 56677 [SYN, ACK] Seq=0 Ack=1 Win=5792 Len=0 MSS=1460 SACK_PERM=1 TSV=12440004 TSER=47883929 WS=5
+80 4.657461    172.16.60.5           172.16.60.1           TCP      56677 > smtp [ACK] Seq=1 Ack=1 Win=14720 Len=0 TSV=47883930 TSER=12440004
+81 4.657465    172.16.60.5           172.16.60.1           TCP      [TCP Dup ACK 80#1] 56677 > smtp [ACK] Seq=1 Ack=1 Win=14720 Len=0 TSV=47883930 TSER=12440004
+86 4.732382    172.16.60.1           172.16.60.5           SMTP     S: 220 g61.psb.com ESMTP Postfix
+87 4.732386    172.16.60.1           172.16.60.5           SMTP     [TCP Out-Of-Order] S: 220 g61.psb.com ESMTP Postfix
+88 4.732506    172.16.60.5           172.16.60.1           TCP      56677 > smtp [ACK] Seq=1 Ack=32 Win=14720 Len=0 TSV=47884005 TSER=12440023
+89 4.732509    172.16.60.5           172.16.60.1           TCP      [TCP Dup ACK 88#1] 56677 > smtp [ACK] Seq=1 Ack=32 Win=14720 Len=0 TSV=47884005 TSER=12440023
+90 4.732753    172.16.60.5           172.16.60.1           SMTP     C: EHLO [172.16.60.5]
+91 4.732757    172.16.60.5           172.16.60.1           SMTP     [TCP Out-Of-Order] C: EHLO [172.16.60.5]
+92 4.732825    172.16.60.1           172.16.60.5           TCP      smtp > 56677 [ACK] Seq=32 Ack=21 Win=5792 Len=0 TSV=12440023 TSER=47884005
+93 4.732828    172.16.60.1           172.16.60.5           TCP      [TCP Dup ACK 92#1] smtp > 56677 [ACK] Seq=32 Ack=21 Win=5792 Len=0 TSV=12440023 TSER=47884005
+94 4.733312    172.16.60.1           172.16.60.5           SMTP     S: 250-g61.psb.com | 250-PIPELINING | 250-SIZE 10240000 | 250-VRFY | 250-ETRN | 250-ENHANCEDSTATUSCODES | 250-8BITMIME | 250 DSN
+95 4.733316    172.16.60.1           172.16.60.5           SMTP     [TCP Out-Of-Order] S: 250-g61.psb.com | 250-PIPELINING | 250-SIZE 10240000 | 250-VRFY | 250-ETRN | 250-ENHANCEDSTATUSCODES | 250-8BITMIME | 250 DSN
+96 4.733643    172.16.60.5           172.16.60.1           SMTP     C: MAIL FROM:<user1@b6.psb.com> SIZE=442
+97 4.733645    172.16.60.5           172.16.60.1           SMTP     [TCP Out-Of-Order] C: MAIL FROM:<user1@b6.psb.com> SIZE=442
+98 4.747788    172.16.60.1           172.16.60.5           SMTP     S: 250 2.1.0 Ok
+99 4.747790    172.16.60.1           172.16.60.5           SMTP     [TCP Out-Of-Order] S: 250 2.1.0 Ok
+100 4.748392    172.16.60.5           172.16.60.1           SMTP     C: RCPT TO:<user2@b5.psb.com>
+101 4.748395    172.16.60.5           172.16.60.1           SMTP     [TCP Out-Of-Order] C: RCPT TO:<user2@b5.psb.com>
+102 4.763902    172.16.60.1           172.16.60.5           SMTP     S: 250 2.1.5 Ok
+103 4.763905    172.16.60.1           172.16.60.5           SMTP     [TCP Out-Of-Order] S: 250 2.1.5 Ok
+104 4.764201    172.16.60.5           172.16.60.1           SMTP     C: DATA
+105 4.764203    172.16.60.5           172.16.60.1           SMTP     [TCP Out-Of-Order] C: DATA fragment, 6 bytes
+106 4.764675    172.16.60.1           172.16.60.5           SMTP     S: 354 End data with <CR><LF>.<CR><LF>
+107 4.764679    172.16.60.1           172.16.60.5           SMTP     [TCP Out-Of-Order] S: 354 End data with <CR><LF>.<CR><LF>
+108 4.766443    172.16.60.5           172.16.60.1           IMF      from: User1 at b6 <user1@b6.psb.com>, subject: =?ISO-8859-1?Q?Sess=E3o_2?=,  (text/plain)
+109 4.766446    172.16.60.5           172.16.60.1           SMTP     [TCP Out-Of-Order] C: DATA fragment, 445 bytes
+114 4.795032    172.16.60.1           172.16.60.5           SMTP     S: 250 2.0.0 Ok: queued as 3930C5BDB
+115 4.795051    172.16.60.1           172.16.60.5           SMTP     [TCP Out-Of-Order] S: 250 2.0.0 Ok: queued as 3930C5BDB
+120 4.796043    172.16.60.1           172.16.2.63           TCP      53712 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12440039 TSER=0 WS=5
+121 4.796046    172.16.60.1           172.16.2.63           TCP      53712 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12440039 TSER=0 WS=5
+122 4.796566    172.16.60.5           172.16.60.1           SMTP     C: QUIT
+123 4.796569    172.16.60.5           172.16.60.1           SMTP     [TCP Out-Of-Order] C: QUIT
+124 4.796753    172.16.60.1           172.16.60.5           SMTP     S: 221 2.0.0 Bye
+125 4.796755    172.16.60.1           172.16.60.5           SMTP     [TCP Out-Of-Order] S: 221 2.0.0 Bye
+126 4.796992    172.16.60.1           172.16.60.5           TCP      smtp > 56677 [FIN, ACK] Seq=267 Ack=545 Win=6880 Len=0 TSV=12440039 TSER=47884069
+127 4.796995    172.16.60.1           172.16.60.5           TCP      smtp > 56677 [FIN, ACK] Seq=267 Ack=545 Win=6880 Len=0 TSV=12440039 TSER=47884069
+128 4.836365    172.16.60.5           172.16.60.1           TCP      56677 > smtp [ACK] Seq=545 Ack=268 Win=14720 Len=0 TSV=47884109 TSER=12440039
+129 4.836367    172.16.60.5           172.16.60.1           TCP      [TCP Dup ACK 128#1] 56677 > smtp [ACK] Seq=545 Ack=268 Win=14720 Len=0 TSV=47884109 TSER=12440039
+130 4.858388    172.16.60.5           172.16.60.1           TCP      56677 > smtp [FIN, ACK] Seq=545 Ack=268 Win=14720 Len=0 TSV=47884131 TSER=12440039
+131 4.858390    172.16.60.5           172.16.60.1           TCP      56677 > smtp [FIN, ACK] Seq=545 Ack=268 Win=14720 Len=0 TSV=47884131 TSER=12440039
+132 4.858465    172.16.60.1           172.16.60.5           TCP      smtp > 56677 [ACK] Seq=268 Ack=546 Win=6880 Len=0 TSV=12440055 TSER=47884131
+133 4.858468    172.16.60.1           172.16.60.5           TCP      [TCP Dup ACK 132#1] smtp > 56677 [ACK] Seq=268 Ack=546 Win=6880 Len=0 TSV=12440055 TSER=47884131
+172 7.794055    172.16.60.1           172.16.2.63           TCP      53712 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12440789 TSER=0 WS=5
+173 7.794059    172.16.60.1           172.16.2.63           TCP      53712 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12440789 TSER=0 WS=5
+246 13.794336   172.16.60.1           172.16.2.63           TCP      53712 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12442289 TSER=0 WS=5
+247 13.794343   172.16.60.1           172.16.2.63           TCP      53712 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12442289 TSER=0 WS=5
+496 25.794891   172.16.60.1           172.16.2.63           TCP      53712 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12445289 TSER=0 WS=5
+497 25.794897   172.16.60.1           172.16.2.63           TCP      53712 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12445289 TSER=0 WS=5
+619 34.803488   172.16.60.1           172.16.60.3           TCP      46765 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12447540 TSER=0 WS=5
+620 34.803490   172.16.60.1           172.16.60.3           TCP      46765 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12447540 TSER=0 WS=5
+621 34.803491   172.16.60.1           172.16.60.3           TCP      46765 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12447540 TSER=0 WS=5
+622 34.803492   172.16.60.1           172.16.60.3           TCP      46765 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12447540 TSER=0 WS=5
+623 34.803496   172.16.60.1           172.16.60.3           TCP      46765 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12447540 TSER=0 WS=5
+624 34.803497   172.16.60.1           172.16.60.3           TCP      46765 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12447540 TSER=0 WS=5
+625 34.803498   172.16.60.1           172.16.60.3           TCP      46765 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12447540 TSER=0 WS=5
+626 34.803499   172.16.60.1           172.16.60.3           TCP      46765 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12447540 TSER=0 WS=5
+627 34.803699   172.16.60.3           172.16.60.1           TCP      smtp > 46765 [SYN, ACK] Seq=0 Ack=1 Win=5792 Len=0 MSS=1460 SACK_PERM=1 TSV=12824770 TSER=12447540 WS=5
+628 34.803704   172.16.60.3           172.16.60.1           TCP      smtp > 46765 [SYN, ACK] Seq=0 Ack=1 Win=5792 Len=0 MSS=1460 SACK_PERM=1 TSV=12824770 TSER=12447540 WS=5
+629 34.803801   172.16.60.1           172.16.60.3           TCP      46765 > smtp [ACK] Seq=1 Ack=1 Win=5856 Len=0 TSV=12447541 TSER=12824770
+630 34.803804   172.16.60.1           172.16.60.3           TCP      [TCP Dup ACK 629#1] 46765 > smtp [ACK] Seq=1 Ack=1 Win=5856 Len=0 TSV=12447541 TSER=12824770
+631 34.803805   172.16.60.1           172.16.60.3           TCP      [TCP Dup ACK 629#2] 46765 > smtp [ACK] Seq=1 Ack=1 Win=5856 Len=0 TSV=12447541 TSER=12824770
+632 34.803806   172.16.60.1           172.16.60.3           TCP      [TCP Dup ACK 629#3] 46765 > smtp [ACK] Seq=1 Ack=1 Win=5856 Len=0 TSV=12447541 TSER=12824770
+633 34.803807   172.16.60.1           172.16.60.3           TCP      [TCP Dup ACK 629#4] 46765 > smtp [ACK] Seq=1 Ack=1 Win=5856 Len=0 TSV=12447541 TSER=12824770
+634 34.803823   172.16.60.1           172.16.60.3           TCP      [TCP Dup ACK 629#5] 46765 > smtp [ACK] Seq=1 Ack=1 Win=5856 Len=0 TSV=12447541 TSER=12824770
+635 34.803826   172.16.60.1           172.16.60.3           TCP      [TCP Dup ACK 629#6] 46765 > smtp [ACK] Seq=1 Ack=1 Win=5856 Len=0 TSV=12447541 TSER=12824770
+636 34.803828   172.16.60.1           172.16.60.3           TCP      [TCP Dup ACK 629#7] 46765 > smtp [ACK] Seq=1 Ack=1 Win=5856 Len=0 TSV=12447541 TSER=12824770
+641 34.897457   172.16.60.3           172.16.60.1           SMTP     S: 220 g63.psb.com ESMTP Postfix
+642 34.897459   172.16.60.3           172.16.60.1           SMTP     [TCP Out-Of-Order] S: 220 g63.psb.com ESMTP Postfix
+643 34.897532   172.16.60.1           172.16.60.3           TCP      46765 > smtp [ACK] Seq=1 Ack=32 Win=5856 Len=0 TSV=12447564 TSER=12824794
+644 34.897536   172.16.60.1           172.16.60.3           TCP      [TCP Dup ACK 643#1] 46765 > smtp [ACK] Seq=1 Ack=32 Win=5856 Len=0 TSV=12447564 TSER=12824794
+645 34.897706   172.16.60.1           172.16.60.3           SMTP     C: EHLO g61.psb.com
+646 34.897709   172.16.60.1           172.16.60.3           SMTP     [TCP Out-Of-Order] C: EHLO g61.psb.com
+647 34.897773   172.16.60.3           172.16.60.1           TCP      smtp > 46765 [ACK] Seq=32 Ack=19 Win=5792 Len=0 TSV=12824794 TSER=12447564
+648 34.897776   172.16.60.3           172.16.60.1           TCP      [TCP Dup ACK 647#1] smtp > 46765 [ACK] Seq=32 Ack=19 Win=5792 Len=0 TSV=12824794 TSER=12447564
+649 34.898228   172.16.60.3           172.16.60.1           SMTP     S: 250-g63.psb.com | 250-PIPELINING | 250-SIZE 10240000 | 250-VRFY | 250-ETRN | 250-ENHANCEDSTATUSCODES | 250-8BITMIME | 250 DSN
+650 34.898231   172.16.60.3           172.16.60.1           SMTP     [TCP Out-Of-Order] S: 250-g63.psb.com | 250-PIPELINING | 250-SIZE 10240000 | 250-VRFY | 250-ETRN | 250-ENHANCEDSTATUSCODES | 250-8BITMIME | 250 DSN
+651 34.898511   172.16.60.1           172.16.60.3           SMTP     C: MAIL FROM:<user1@b6.psb.com> SIZE=612 | RCPT TO:<user2@b5.psb.com> ORCPT=rfc822;user2@b5.psb.com | DATA
+652 34.898515   172.16.60.1           172.16.60.3           SMTP     [TCP Out-Of-Order] C: DATA fragment, 103 bytes
+653 34.936376   172.16.60.3           172.16.60.1           TCP      smtp > 46765 [ACK] Seq=152 Ack=122 Win=5792 Len=0 TSV=12824804 TSER=12447564
+654 34.936379   172.16.60.3           172.16.60.1           TCP      [TCP Dup ACK 653#1] smtp > 46765 [ACK] Seq=152 Ack=122 Win=5792 Len=0 TSV=12824804 TSER=12447564
+655 34.948680   172.16.60.3           172.16.60.1           SMTP     S: 250 2.1.0 Ok | 250 2.1.5 Ok | 354 End data with <CR><LF>.<CR><LF>
+656 34.948683   172.16.60.3           172.16.60.1           SMTP     [TCP Out-Of-Order] S: 250 2.1.0 Ok | 250 2.1.5 Ok | 354 End data with <CR><LF>.<CR><LF>
+657 34.949002   172.16.60.1           172.16.60.3           IMF      from: User1 at b6 <user1@b6.psb.com>, subject: =?ISO-8859-1?Q?Sess=E3o_2?=,  (text/plain)
+658 34.949004   172.16.60.1           172.16.60.3           SMTP     [TCP Out-Of-Order] C: Received: from [172.16.60.5] (unknown [172.16.60.5]) | \tby g61.psb.com (Postfix) with ESMTP id 3930C5BDB | \tfor <user2@b5.psb.com>; Fri, 10 Jun 2011 02:32:43 +0100 (WEST) | Message-ID: <4DF17758.6020700@b6.psb.com> | Date: Fri, 10 Jun 2011 02:46:00 +0100 | From: User1 at b6 <user1@b6.psb.com> | User-Agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.2.17) Gecko/20110609 Lightning/1.0b3pre Thunderbird/3.1.10 | MIME-Version: 1.0 | To: User2 at b5 <user2@b5.psb.com> | Subject: =?ISO-8859-1?Q?Sess=E3o_2?= | Content-Type: text/plain; charset=ISO-8859-1 | Content-Transfer-Encoding: 7bit |  | Oi. | Ta quase terminando. | . | QUIT
+659 34.949163   172.16.60.3           172.16.60.1           TCP      smtp > 46765 [ACK] Seq=217 Ack=743 Win=7040 Len=0 TSV=12824807 TSER=12447577
+660 34.949167   172.16.60.3           172.16.60.1           TCP      [TCP Dup ACK 659#1] smtp > 46765 [ACK] Seq=217 Ack=743 Win=7040 Len=0 TSV=12824807 TSER=12447577
+661 35.007923   172.16.60.3           172.16.60.1           SMTP     S: 250 2.0.0 Ok: queued as 5668A2FA | 221 2.0.0 Bye
+662 35.007926   172.16.60.3           172.16.60.1           SMTP     [TCP Out-Of-Order] S: 250 2.0.0 Ok: queued as 5668A2FA | 221 2.0.0 Bye
+663 35.008155   172.16.60.3           172.16.60.1           TCP      smtp > 46765 [FIN, ACK] Seq=266 Ack=743 Win=7040 Len=0 TSV=12824821 TSER=12447577
+664 35.008162   172.16.60.3           172.16.60.1           TCP      smtp > 46765 [FIN, ACK] Seq=266 Ack=743 Win=7040 Len=0 TSV=12824821 TSER=12447577
+665 35.008401   172.16.60.1           172.16.60.3           TCP      46765 > smtp [FIN, ACK] Seq=743 Ack=267 Win=5856 Len=0 TSV=12447592 TSER=12824821
+666 35.008403   172.16.60.1           172.16.60.3           TCP      46765 > smtp [FIN, ACK] Seq=743 Ack=267 Win=5856 Len=0 TSV=12447592 TSER=12824821
+667 35.008514   172.16.60.3           172.16.60.1           TCP      smtp > 46765 [ACK] Seq=267 Ack=744 Win=7040 Len=0 TSV=12824822 TSER=12447592
+668 35.008517   172.16.60.3           172.16.60.1           TCP      [TCP Dup ACK 667#1] smtp > 46765 [ACK] Seq=267 Ack=744 Win=7040 Len=0 TSV=12824822 TSER=12447592
+687 35.032576   172.16.2.63           172.16.50.4           TCP      48484 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12824827 TSER=0 WS=5
+688 35.032578   172.16.2.63           172.16.50.4           TCP      48484 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12824827 TSER=0 WS=5
+697 38.028438   172.16.2.63           172.16.50.4           TCP      48484 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12825577 TSER=0 WS=5
+698 38.028440   172.16.2.63           172.16.50.4           TCP      48484 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12825577 TSER=0 WS=5
+800 44.028623   172.16.2.63           172.16.50.4           TCP      48484 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12827077 TSER=0 WS=5
+801 44.028629   172.16.2.63           172.16.50.4           TCP      48484 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12827077 TSER=0 WS=5
+916 56.028979   172.16.2.63           172.16.50.4           TCP      48484 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12830077 TSER=0 WS=5
+917 56.028984   172.16.2.63           172.16.50.4           TCP      48484 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12830077 TSER=0 WS=5
+1079 65.037326   172.16.2.63           172.16.2.54           TCP      57733 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12832328 TSER=0 WS=5
+1080 65.037328   172.16.2.63           172.16.2.54           TCP      57733 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=12832328 TSER=0 WS=5
+1081 65.037375   172.16.2.54           172.16.2.63           TCP      smtp > 57733 [SYN, ACK] Seq=0 Ack=1 Win=5792 Len=0 MSS=1460 SACK_PERM=1 TSV=5204039 TSER=12832328 WS=7
+1082 65.037380   172.16.2.54           172.16.2.63           TCP      smtp > 57733 [SYN, ACK] Seq=0 Ack=1 Win=5792 Len=0 MSS=1460 SACK_PERM=1 TSV=5204039 TSER=12832328 WS=7
+1083 65.037484   172.16.2.63           172.16.2.54           TCP      57733 > smtp [ACK] Seq=1 Ack=1 Win=5856 Len=0 TSV=12832329 TSER=5204039
+1084 65.037489   172.16.2.63           172.16.2.54           TCP      [TCP Dup ACK 1083#1] 57733 > smtp [ACK] Seq=1 Ack=1 Win=5856 Len=0 TSV=12832329 TSER=5204039
+1089 65.090269   172.16.2.54           172.16.2.63           SMTP     S: 220 g54 ESMTP Postfix
+1090 65.090277   172.16.2.54           172.16.2.63           SMTP     [TCP Out-Of-Order] S: 220 g54 ESMTP Postfix
+1091 65.090348   172.16.2.63           172.16.2.54           TCP      57733 > smtp [ACK] Seq=1 Ack=24 Win=5856 Len=0 TSV=12832342 TSER=5204053
+1092 65.090353   172.16.2.63           172.16.2.54           TCP      [TCP Dup ACK 1091#1] 57733 > smtp [ACK] Seq=1 Ack=24 Win=5856 Len=0 TSV=12832342 TSER=5204053
+1093 65.090526   172.16.2.63           172.16.2.54           SMTP     C: EHLO g63.psb.com
+1094 65.090529   172.16.2.63           172.16.2.54           SMTP     [TCP Out-Of-Order] C: EHLO g63.psb.com
+1095 65.090573   172.16.2.54           172.16.2.63           TCP      smtp > 57733 [ACK] Seq=24 Ack=19 Win=5888 Len=0 TSV=5204053 TSER=12832342
+1096 65.090580   172.16.2.54           172.16.2.63           TCP      [TCP Dup ACK 1095#1] smtp > 57733 [ACK] Seq=24 Ack=19 Win=5888 Len=0 TSV=5204053 TSER=12832342
+1097 65.090631   172.16.2.54           172.16.2.63           SMTP     S: 250-g54 | 250-PIPELINING | 250-SIZE 10240000 | 250-VRFY | 250-ETRN | 250-ENHANCEDSTATUSCODES | 250-8BITMIME | 250 DSN
+1098 65.090634   172.16.2.54           172.16.2.63           SMTP     [TCP Out-Of-Order] S: 250-g54 | 250-PIPELINING | 250-SIZE 10240000 | 250-VRFY | 250-ETRN | 250-ENHANCEDSTATUSCODES | 250-8BITMIME | 250 DSN
+1099 65.090932   172.16.2.63           172.16.2.54           SMTP     C: MAIL FROM:<user1@b6.psb.com> SIZE=779 | RCPT TO:<user2@b5.psb.com> ORCPT=rfc822;user2@b5.psb.com | DATA
+1100 65.090935   172.16.2.63           172.16.2.54           SMTP     [TCP Out-Of-Order] C: DATA fragment, 103 bytes
+1101 65.098819   172.16.2.54           172.16.2.63           SMTP     S: 250 2.1.0 Ok | 250 2.1.5 Ok | 354 End data with <CR><LF>.<CR><LF>
+1102 65.098825   172.16.2.54           172.16.2.63           SMTP     [TCP Out-Of-Order] S: 250 2.1.0 Ok | 250 2.1.5 Ok | 354 End data with <CR><LF>.<CR><LF>
+1103 65.099186   172.16.2.63           172.16.2.54           IMF      from: User1 at b6 <user1@b6.psb.com>, subject: =?ISO-8859-1?Q?Sess=E3o_2?=,  (text/plain)
+1104 65.099189   172.16.2.63           172.16.2.54           SMTP     [TCP Out-Of-Order] C: Received: from g61.psb.com (unknown [172.16.60.1]) | \tby g63.psb.com (Postfix) with ESMTP id 5668A2FA | \tfor <user2@b5.psb.com>; Fri, 10 Jun 2011 02:42:13 +0100 (WEST) | Received: from [172.16.60.5] (unknown [172.16.60.5]) | \tby g61.psb.com (Postfix) with ESMTP id 3930C5BDB | \tfor <user2@b5.psb.com>; Fri, 10 Jun 2011 02:32:43 +0100 (WEST) | Message-ID: <4DF17758.6020700@b6.psb.com> | Date: Fri, 10 Jun 2011 02:46:00 +0100 | From: User1 at b6 <user1@b6.psb.com> | User-Agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.2.17) Gecko/20110609 Lightning/1.0b3pre Thunderbird/3.1.10 | MIME-Version: 1.0 | To: User2 at b5 <user2@b5.psb.com> | Subject: =?ISO-8859-1?Q?Sess=E3o_2?= | Content-Type: text/plain; charset=ISO-8859-1 | Content-Transfer-Encoding: 7bit |  | Oi. | Ta quase terminando. | . | QUIT
+1105 65.108380   172.16.2.54           172.16.2.63           SMTP     S: 250 2.0.0 Ok: queued as F1EDC1DFD | 221 2.0.0 Bye
+1106 65.108384   172.16.2.54           172.16.2.63           SMTP     [TCP Out-Of-Order] S: 250 2.0.0 Ok: queued as F1EDC1DFD | 221 2.0.0 Bye
+1107 65.108475   172.16.2.54           172.16.2.63           TCP      smtp > 57733 [FIN, ACK] Seq=251 Ack=910 Win=7424 Len=0 TSV=5204057 TSER=12832344
+1108 65.108478   172.16.2.54           172.16.2.63           TCP      smtp > 57733 [FIN, ACK] Seq=251 Ack=910 Win=7424 Len=0 TSV=5204057 TSER=12832344
+1109 65.108969   172.16.2.63           172.16.2.54           TCP      57733 > smtp [FIN, ACK] Seq=910 Ack=252 Win=5856 Len=0 TSV=12832346 TSER=5204057
+1110 65.108972   172.16.2.63           172.16.2.54           TCP      57733 > smtp [FIN, ACK] Seq=910 Ack=252 Win=5856 Len=0 TSV=12832346 TSER=5204057
+1111 65.109027   172.16.2.54           172.16.2.63           TCP      smtp > 57733 [ACK] Seq=252 Ack=911 Win=7424 Len=0 TSV=5204057 TSER=12832346
+1112 65.109031   172.16.2.54           172.16.2.63           TCP      [TCP Dup ACK 1111#1] smtp > 57733 [ACK] Seq=252 Ack=911 Win=7424 Len=0 TSV=5204057 TSER=12832346
+1131 65.114090   172.16.50.4           172.16.50.3           TCP      45348 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=5204058 TSER=0 WS=7
+1132 65.114094   172.16.50.4           172.16.50.3           TCP      45348 > smtp [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSV=5204058 TSER=0 WS=7
+1133 65.114242   172.16.50.3           172.16.50.4           TCP      smtp > 45348 [SYN, ACK] Seq=0 Ack=1 Win=5792 Len=0 MSS=1460 SACK_PERM=1 TSV=5426155 TSER=5204058 WS=5
+1134 65.114245   172.16.50.3           172.16.50.4           TCP      smtp > 45348 [SYN, ACK] Seq=0 Ack=1 Win=5792 Len=0 MSS=1460 SACK_PERM=1 TSV=5426155 TSER=5204058 WS=5
+1135 65.114320   172.16.50.4           172.16.50.3           TCP      45348 > smtp [ACK] Seq=1 Ack=1 Win=5888 Len=0 TSV=5204059 TSER=5426155
+1136 65.114323   172.16.50.4           172.16.50.3           TCP      [TCP Dup ACK 1135#1] 45348 > smtp [ACK] Seq=1 Ack=1 Win=5888 Len=0 TSV=5204059 TSER=5426155
+1141 65.194484   172.16.50.3           172.16.50.4           SMTP     S: 220 g53.psb.com ESMTP Postfix
+1142 65.194487   172.16.50.3           172.16.50.4           SMTP     [TCP Out-Of-Order] S: 220 g53.psb.com ESMTP Postfix
+1143 65.194549   172.16.50.4           172.16.50.3           TCP      45348 > smtp [ACK] Seq=1 Ack=32 Win=5888 Len=0 TSV=5204079 TSER=5426175
+1144 65.194553   172.16.50.4           172.16.50.3           TCP      [TCP Dup ACK 1143#1] 45348 > smtp [ACK] Seq=1 Ack=32 Win=5888 Len=0 TSV=5204079 TSER=5426175
+1145 65.194579   172.16.50.4           172.16.50.3           SMTP     C: EHLO g54
+1146 65.194582   172.16.50.4           172.16.50.3           SMTP     [TCP Out-Of-Order] C: EHLO g54
+1147 65.194678   172.16.50.3           172.16.50.4           TCP      smtp > 45348 [ACK] Seq=32 Ack=11 Win=5792 Len=0 TSV=5426176 TSER=5204079
+1148 65.194681   172.16.50.3           172.16.50.4           TCP      [TCP Dup ACK 1147#1] smtp > 45348 [ACK] Seq=32 Ack=11 Win=5792 Len=0 TSV=5426176 TSER=5204079
+1149 65.195081   172.16.50.3           172.16.50.4           SMTP     S: 250-g53.psb.com | 250-PIPELINING | 250-SIZE 10240000 | 250-VRFY | 250-ETRN | 250-ENHANCEDSTATUSCODES | 250-8BITMIME | 250 DSN
+1150 65.195083   172.16.50.3           172.16.50.4           SMTP     [TCP Out-Of-Order] S: 250-g53.psb.com | 250-PIPELINING | 250-SIZE 10240000 | 250-VRFY | 250-ETRN | 250-ENHANCEDSTATUSCODES | 250-8BITMIME | 250 DSN
+1151 65.195217   172.16.50.4           172.16.50.3           SMTP     C: MAIL FROM:<user1@b6.psb.com> SIZE=939 | RCPT TO:<user2@b5.psb.com> ORCPT=rfc822;user2@b5.psb.com | DATA
+1152 65.195220   172.16.50.4           172.16.50.3           SMTP     [TCP Out-Of-Order] C: DATA fragment, 103 bytes
+1153 65.229323   172.16.50.3           172.16.50.4           SMTP     S: 250 2.1.0 Ok | 250 2.1.5 Ok | 354 End data with <CR><LF>.<CR><LF>
+1154 65.229326   172.16.50.3           172.16.50.4           SMTP     [TCP Out-Of-Order] S: 250 2.1.0 Ok | 250 2.1.5 Ok | 354 End data with <CR><LF>.<CR><LF>
+1155 65.229529   172.16.50.4           172.16.50.3           IMF      from: User1 at b6 <user1@b6.psb.com>, subject: =?ISO-8859-1?Q?Sess=E3o_2?=,  (text/plain)
+1156 65.229533   172.16.50.4           172.16.50.3           SMTP     [TCP Out-Of-Order] C: Received: from g63.psb.com (unknown [172.16.2.63]) | \tby g54 (Postfix) with ESMTP id F1EDC1DFD | \tfor <user2@b5.psb.com>; Fri, 10 Jun 2011 02:46:52 +0100 (WEST) | Received: from g61.psb.com (unknown [172.16.60.1]) | \tby g63.psb.com (Postfix) with ESMTP id 5668A2FA | \tfor <user2@b5.psb.com>; Fri, 10 Jun 2011 02:42:13 +0100 (WEST) | Received: from [172.16.60.5] (unknown [172.16.60.5]) | \tby g61.psb.com (Postfix) with ESMTP id 3930C5BDB | \tfor <user2@b5.psb.com>; Fri, 10 Jun 2011 02:32:43 +0100 (WEST) | Message-ID: <4DF17758.6020700@b6.psb.com> | Date: Fri, 10 Jun 2011 02:46:00 +0100 | From: User1 at b6 <user1@b6.psb.com> | User-Agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.2.17) Gecko/20110609 Lightning/1.0b3pre Thunderbird/3.1.10 | MIME-Version: 1.0 | To: User2 at b5 <user2@b5.psb.com> | Subject: =?ISO-8859-1?Q?Sess=E3o_2?= | Content-Type: text/plain; charset=ISO-8859-1 | Content-Transfer-Encoding: 7bit |  | Oi. | Ta quase terminando. | . | QUIT
+1157 65.258070   172.16.50.3           172.16.50.4           SMTP     S: 250 2.0.0 Ok: queued as E3EEBC9C | 221 2.0.0 Bye
+1158 65.258077   172.16.50.3           172.16.50.4           SMTP     [TCP Out-Of-Order] S: 250 2.0.0 Ok: queued as E3EEBC9C | 221 2.0.0 Bye
+1159 65.258236   172.16.50.4           172.16.50.3           TCP      45348 > smtp [FIN, ACK] Seq=1062 Ack=266 Win=5888 Len=0 TSV=5204095 TSER=5426191
+1160 65.258241   172.16.50.4           172.16.50.3           TCP      45348 > smtp [FIN, ACK] Seq=1062 Ack=266 Win=5888 Len=0 TSV=5204095 TSER=5426191
+1161 65.258425   172.16.50.3           172.16.50.4           TCP      smtp > 45348 [FIN, ACK] Seq=266 Ack=1063 Win=8704 Len=0 TSV=5426191 TSER=5204095
+1162 65.258427   172.16.50.3           172.16.50.4           TCP      smtp > 45348 [FIN, ACK] Seq=266 Ack=1063 Win=8704 Len=0 TSV=5426191 TSER=5204095
+1163 65.258484   172.16.50.4           172.16.50.3           TCP      45348 > smtp [ACK] Seq=1063 Ack=267 Win=5888 Len=0 TSV=5204095 TSER=5426191
+1164 65.258486   172.16.50.4           172.16.50.3           TCP      [TCP Dup ACK 1163#1] 45348 > smtp [ACK] Seq=1063 Ack=267 Win=5888 Len=0 TSV=5204095 TSER=5426191
+1201 66.128177   172.16.50.5           172.16.50.3           TCP      53002 > pop3 [SYN] Seq=0 Win=14600 Len=0 MSS=1460 SACK_PERM=1 TSV=47945401 TSER=0 WS=7
+1202 66.128181   172.16.50.5           172.16.50.3           TCP      53002 > pop3 [SYN] Seq=0 Win=14600 Len=0 MSS=1460 SACK_PERM=1 TSV=47945401 TSER=0 WS=7
+1203 66.128336   172.16.50.3           172.16.50.5           TCP      pop3 > 53002 [SYN, ACK] Seq=0 Ack=1 Win=5792 Len=0 MSS=1460 SACK_PERM=1 TSV=5426409 TSER=47945401 WS=5
+1204 66.128340   172.16.50.3           172.16.50.5           TCP      pop3 > 53002 [SYN, ACK] Seq=0 Ack=1 Win=5792 Len=0 MSS=1460 SACK_PERM=1 TSV=5426409 TSER=47945401 WS=5
+1205 66.128446   172.16.50.5           172.16.50.3           TCP      53002 > pop3 [ACK] Seq=1 Ack=1 Win=14720 Len=0 TSV=47945401 TSER=5426409
+1206 66.128449   172.16.50.5           172.16.50.3           TCP      [TCP Dup ACK 1205#1] 53002 > pop3 [ACK] Seq=1 Ack=1 Win=14720 Len=0 TSV=47945401 TSER=5426409
+1207 66.132346   172.16.50.3           172.16.50.5           POP      S: +OK Hello there.
+1208 66.132350   172.16.50.3           172.16.50.5           POP      [TCP Out-Of-Order] S: +OK Hello there.
+1209 66.132447   172.16.50.5           172.16.50.3           TCP      53002 > pop3 [ACK] Seq=1 Ack=19 Win=14720 Len=0 TSV=47945405 TSER=5426410
+1210 66.132450   172.16.50.5           172.16.50.3           TCP      [TCP Dup ACK 1209#1] 53002 > pop3 [ACK] Seq=1 Ack=19 Win=14720 Len=0 TSV=47945405 TSER=5426410
+1211 66.132685   172.16.50.5           172.16.50.3           POP      C: CAPA
+1212 66.132688   172.16.50.5           172.16.50.3           POP      [TCP Out-Of-Order] C: CAPA
+1213 66.132991   172.16.50.3           172.16.50.5           TCP      pop3 > 53002 [ACK] Seq=19 Ack=7 Win=5792 Len=0 TSV=5426410 TSER=47945405
+1214 66.132994   172.16.50.3           172.16.50.5           TCP      [TCP Dup ACK 1213#1] pop3 > 53002 [ACK] Seq=19 Ack=7 Win=5792 Len=0 TSV=5426410 TSER=47945405
+1215 66.133100   172.16.50.3           172.16.50.5           POP      S: +OK Here's what I can do:
+1216 66.133104   172.16.50.3           172.16.50.5           POP      [TCP Out-Of-Order] S: +OK Here's what I can do:
+1217 66.133715   172.16.50.5           172.16.50.3           POP      C: USER netedu
+1218 66.133718   172.16.50.5           172.16.50.3           POP      [TCP Out-Of-Order] C: USER netedu
+1219 66.134166   172.16.50.3           172.16.50.5           POP      S: +OK Password required.
+1220 66.134170   172.16.50.3           172.16.50.5           POP      [TCP Out-Of-Order] S: +OK Password required.
+1221 66.134491   172.16.50.5           172.16.50.3           POP      C: PASS netedu
+1222 66.134494   172.16.50.5           172.16.50.3           POP      [TCP Out-Of-Order] C: PASS netedu
+1223 66.147457   172.16.50.3           172.16.50.5           POP      S: +OK logged in.
+1224 66.147461   172.16.50.3           172.16.50.5           POP      [TCP Out-Of-Order] S: +OK logged in.
+1225 66.147761   172.16.50.5           172.16.50.3           POP      C: STAT
+1226 66.147765   172.16.50.5           172.16.50.3           POP      [TCP Out-Of-Order] C: STAT
+1227 66.148340   172.16.50.3           172.16.50.5           POP      S: +OK 1 1196
+1228 66.148343   172.16.50.3           172.16.50.5           POP      [TCP Out-Of-Order] S: +OK 1 1196
+1229 66.150682   172.16.50.5           172.16.50.3           POP      C: LIST
+1230 66.150684   172.16.50.5           172.16.50.3           POP      [TCP Out-Of-Order] C: LIST
+1231 66.150817   172.16.50.3           172.16.50.5           POP      S: +OK POP3 clients that break here, they violate STD53.
+1232 66.150821   172.16.50.3           172.16.50.5           POP      [TCP Out-Of-Order] S: +OK POP3 clients that break here, they violate STD53.
+1233 66.151871   172.16.50.5           172.16.50.3           POP      C: UIDL
+1234 66.151875   172.16.50.5           172.16.50.3           POP      [TCP Out-Of-Order] C: UIDL
+1235 66.151969   172.16.50.3           172.16.50.5           POP      S: +OK
+1236 66.151972   172.16.50.3           172.16.50.5           POP      [TCP Out-Of-Order] S: +OK
+1237 66.152526   172.16.50.5           172.16.50.3           POP      C: RETR 1
+1238 66.152529   172.16.50.5           172.16.50.3           POP      [TCP Out-Of-Order] C: RETR 1
+1239 66.153054   172.16.50.3           172.16.50.5           POP      S: +OK 1196 octets follow.
+1240 66.153057   172.16.50.3           172.16.50.5           POP      [TCP Out-Of-Order] S: +OK 1196 octets follow.
+1241 66.193021   172.16.50.5           172.16.50.3           TCP      53002 > pop3 [ACK] Seq=59 Ack=1499 Win=17152 Len=0 TSV=47945466 TSER=5426415
+1242 66.193025   172.16.50.5           172.16.50.3           TCP      [TCP Dup ACK 1241#1] 53002 > pop3 [ACK] Seq=59 Ack=1499 Win=17152 Len=0 TSV=47945466 TSER=5426415
+1243 66.235403   172.16.50.5           172.16.50.3           POP      C: QUIT
+1244 66.235407   172.16.50.5           172.16.50.3           POP      [TCP Out-Of-Order] C: QUIT
+1245 66.235528   172.16.50.3           172.16.50.5           POP      S: +OK Bye-bye.
+1246 66.235530   172.16.50.3           172.16.50.5           POP      [TCP Out-Of-Order] S: +OK Bye-bye.
+1247 66.235628   172.16.50.5           172.16.50.3           TCP      53002 > pop3 [ACK] Seq=65 Ack=1513 Win=17152 Len=0 TSV=47945508 TSER=5426436
+1248 66.235631   172.16.50.5           172.16.50.3           TCP      [TCP Dup ACK 1247#1] 53002 > pop3 [ACK] Seq=65 Ack=1513 Win=17152 Len=0 TSV=47945508 TSER=5426436
+1249 66.235817   172.16.50.3           172.16.50.5           TCP      pop3 > 53002 [FIN, ACK] Seq=1513 Ack=65 Win=5792 Len=0 TSV=5426436 TSER=47945508
+1250 66.235821   172.16.50.3           172.16.50.5           TCP      pop3 > 53002 [FIN, ACK] Seq=1513 Ack=65 Win=5792 Len=0 TSV=5426436 TSER=47945508
+1251 66.246156   172.16.50.5           172.16.50.3           TCP      53002 > pop3 [FIN, ACK] Seq=65 Ack=1514 Win=17152 Len=0 TSV=47945519 TSER=5426436
+1252 66.246159   172.16.50.5           172.16.50.3           TCP      53002 > pop3 [FIN, ACK] Seq=65 Ack=1514 Win=17152 Len=0 TSV=47945519 TSER=5426436
+1253 66.246294   172.16.50.3           172.16.50.5           TCP      pop3 > 53002 [ACK] Seq=1514 Ack=66 Win=5792 Len=0 TSV=5426438 TSER=47945519
+1254 66.246296   172.16.50.3           172.16.50.5           TCP      [TCP Dup ACK 1253#1] pop3 > 53002 [ACK] Seq=1514 Ack=66 Win=5792 Len=0 TSV=5426438 TSER=47945519
