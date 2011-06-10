@@ -215,28 +215,23 @@ no Wireshark. Aqui os pacotes apareceram com a mensagem ``Application
 Data'' por terem sido encriptados e não terem sido reconhecidos como
 uma comunicação numa sessão POP3 válida.
 
-\subsection{Sessão 4.1}
-
-
-
-\subsection{Sessão 4.2}
+\subsection{Sessão 4}
 
 Á semelhança do que se passou com a Sessão 3.2, correspondente à comunicação
-POP3 sobre SSL, nesta sessão não foi possível identificar a comunicação IMAP
+POP3 sobre SSL, na Sessão 4.2 não foi possível identificar a comunicação IMAP
 identificada na Sessão 4.1 devido à encriptação dos dados.
 
 \section{Conclusão}
 
 Neste trabalho foi possível comprovar a utilização do protocolo SMTP no 
-envio de e-mails para o serviço Postfix. E, quase em simultâneo, verificar 
-a utilização dos protocolos POP3 e IMAP no download de e-mails do 
-serviço Postfix. Bem como as suas principais diferenças.
+envio de e-mails para o serviço Postfix. Bem como como os diversos serviços 
+de SMTP colaboram na troca de mensagens por forma às mesmas chegarem ao 
+destino apropriado.
 
+Em simultâneo podemos verificar a utilização dos protocolos POP3 e IMAP no 
+download de e-mails do serviço Postfix. Bem como as suas principais diferenças. 
 No protocolo POP3 sempre que é lido um e-mail do servidor o mesmo é
 apagado do servidor. Por contraste, no protocolo IMAP isto pode não se passar.
-
-Também observámos a forma como os diversos serviços de SMTP colaboram na
-troca de mensagens por forma às mesmas chegarem ao destino apropriado.
 
 Adicionalmente, podemos observar através das capturas do Wireshark, que
 quando o protocolo POP3 ou IMAP são utilizados sobre SSL, todas as
