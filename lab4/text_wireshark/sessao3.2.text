@@ -1,0 +1,77 @@
+No.     Time        Source                Destination           Protocol Info
+    153 9.248675    172.16.60.5           172.16.60.1           TCP      38940 > pop3s [SYN] Seq=0 Win=14600 Len=0 MSS=1460 SACK_PERM=1 TSV=51076134 TSER=0 WS=7
+    154 9.248681    172.16.60.5           172.16.60.1           TCP      38940 > pop3s [SYN] Seq=0 Win=14600 Len=0 MSS=1460 SACK_PERM=1 TSV=51076134 TSER=0 WS=7
+    155 9.248838    172.16.60.1           172.16.60.5           TCP      pop3s > 38940 [SYN, ACK] Seq=0 Ack=1 Win=5792 Len=0 MSS=1460 SACK_PERM=1 TSV=13238012 TSER=51076134 WS=5
+    156 9.248844    172.16.60.1           172.16.60.5           TCP      pop3s > 38940 [SYN, ACK] Seq=0 Ack=1 Win=5792 Len=0 MSS=1460 SACK_PERM=1 TSV=13238012 TSER=51076134 WS=5
+    157 9.248908    172.16.60.5           172.16.60.1           TCP      38940 > pop3s [ACK] Seq=1 Ack=1 Win=14720 Len=0 TSV=51076135 TSER=13238012
+    158 9.248911    172.16.60.5           172.16.60.1           TCP      [TCP Dup ACK 157#1] 38940 > pop3s [ACK] Seq=1 Ack=1 Win=14720 Len=0 TSV=51076135 TSER=13238012
+    159 9.249647    172.16.60.5           172.16.60.1           TLSv1    Client Hello
+    160 9.249652    172.16.60.5           172.16.60.1           TLSv1    [TCP Out-Of-Order] Client Hello
+    161 9.249781    172.16.60.1           172.16.60.5           TCP      pop3s > 38940 [ACK] Seq=1 Ack=169 Win=6880 Len=0 TSV=13238013 TSER=51076135
+    162 9.249784    172.16.60.1           172.16.60.5           TCP      [TCP Dup ACK 161#1] pop3s > 38940 [ACK] Seq=1 Ack=169 Win=6880 Len=0 TSV=13238013 TSER=51076135
+    163 9.389876    172.16.60.1           172.16.60.5           TLSv1    Server Hello, Certificate, Server Hello Done
+    164 9.389881    172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Server Hello, Certificate, Server Hello Done
+    165 9.390125    172.16.60.5           172.16.60.1           TCP      38940 > pop3s [ACK] Seq=169 Ack=854 Win=16384 Len=0 TSV=51076276 TSER=13238048
+    166 9.390128    172.16.60.5           172.16.60.1           TCP      [TCP Dup ACK 165#1] 38940 > pop3s [ACK] Seq=169 Ack=854 Win=16384 Len=0 TSV=51076276 TSER=13238048
+    167 9.393500    172.16.60.5           172.16.60.1           TLSv1    Client Key Exchange, Change Cipher Spec, Encrypted Handshake Message
+    168 9.393503    172.16.60.5           172.16.60.1           TLSv1    [TCP Out-Of-Order] Client Key Exchange, Change Cipher Spec, Encrypted Handshake Message
+    169 9.393575    172.16.60.1           172.16.60.5           TCP      pop3s > 38940 [ACK] Seq=854 Ack=367 Win=7936 Len=0 TSV=13238048 TSER=51076279
+    170 9.393578    172.16.60.1           172.16.60.5           TCP      [TCP Dup ACK 169#1] pop3s > 38940 [ACK] Seq=854 Ack=367 Win=7936 Len=0 TSV=13238048 TSER=51076279
+    171 9.408961    172.16.60.1           172.16.60.5           TLSv1    Encrypted Handshake Message, Change Cipher Spec, Encrypted Handshake Message
+    172 9.408966    172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Encrypted Handshake Message, Change Cipher Spec, Encrypted Handshake Message
+    173 9.448966    172.16.60.5           172.16.60.1           TCP      38940 > pop3s [ACK] Seq=367 Ack=1104 Win=18048 Len=0 TSV=51076335 TSER=13238052
+    174 9.448971    172.16.60.5           172.16.60.1           TCP      [TCP Dup ACK 173#1] 38940 > pop3s [ACK] Seq=367 Ack=1104 Win=18048 Len=0 TSV=51076335 TSER=13238052
+    175 9.449107    172.16.60.1           172.16.60.5           TLSv1    Application Data
+    176 9.449110    172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Application Data
+    177 9.449251    172.16.60.5           172.16.60.1           TCP      38940 > pop3s [ACK] Seq=367 Ack=1157 Win=18048 Len=0 TSV=51076335 TSER=13238062
+    178 9.449253    172.16.60.5           172.16.60.1           TCP      [TCP Dup ACK 177#1] 38940 > pop3s [ACK] Seq=367 Ack=1157 Win=18048 Len=0 TSV=51076335 TSER=13238062
+    179 9.449704    172.16.60.5           172.16.60.1           TLSv1    Application Data
+    180 9.449709    172.16.60.5           172.16.60.1           TLSv1    [TCP Out-Of-Order] Application Data
+    181 9.450075    172.16.60.1           172.16.60.5           TLSv1    Application Data
+    182 9.450078    172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Application Data
+    183 9.450591    172.16.60.5           172.16.60.1           TLSv1    Application Data
+    184 9.450594    172.16.60.5           172.16.60.1           TLSv1    [TCP Out-Of-Order] Application Data
+    185 9.450909    172.16.60.1           172.16.60.5           TLSv1    Application Data
+    186 9.450912    172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Application Data
+    187 9.468416    172.16.60.5           172.16.60.1           TLSv1    Application Data
+    188 9.468419    172.16.60.5           172.16.60.1           TLSv1    [TCP Out-Of-Order] Application Data
+    189 9.469056    172.16.60.1           172.16.60.5           TLSv1    Application Data
+    190 9.469058    172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Application Data
+    191 9.470431    172.16.60.5           172.16.60.1           TLSv1    Application Data
+    192 9.470434    172.16.60.5           172.16.60.1           TLSv1    [TCP Out-Of-Order] Application Data
+    193 9.483601    172.16.60.1           172.16.60.5           TLSv1    Application Data
+    194 9.483604    172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Application Data
+    195 9.484097    172.16.60.5           172.16.60.1           TLSv1    Application Data
+    196 9.484100    172.16.60.5           172.16.60.1           TLSv1    [TCP Out-Of-Order] Application Data
+    197 9.484461    172.16.60.1           172.16.60.5           TLSv1    Application Data
+    198 9.484463    172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Application Data
+    199 9.488137    172.16.60.5           172.16.60.1           TLSv1    Application Data
+    200 9.488140    172.16.60.5           172.16.60.1           TLSv1    [TCP Out-Of-Order] Application Data
+    201 9.488424    172.16.60.1           172.16.60.5           TLSv1    Application Data
+    202 9.488427    172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Application Data
+    203 9.489740    172.16.60.5           172.16.60.1           TLSv1    Application Data
+    204 9.489743    172.16.60.5           172.16.60.1           TLSv1    [TCP Out-Of-Order] Application Data
+    205 9.490015    172.16.60.1           172.16.60.5           TLSv1    Application Data
+    206 9.490018    172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Application Data
+    207 9.491184    172.16.60.5           172.16.60.1           TLSv1    Application Data
+    208 9.491188    172.16.60.5           172.16.60.1           TLSv1    [TCP Out-Of-Order] Application Data
+    209 9.492024    172.16.60.1           172.16.60.5           TLSv1    Application Data
+    210 9.492026    172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Application Data
+    211 9.531939    172.16.60.5           172.16.60.1           TCP      38940 > pop3s [ACK] Seq=695 Ack=2509 Win=21504 Len=0 TSV=51076418 TSER=13238073
+    212 9.531943    172.16.60.5           172.16.60.1           TCP      [TCP Dup ACK 211#1] 38940 > pop3s [ACK] Seq=695 Ack=2509 Win=21504 Len=0 TSV=51076418 TSER=13238073
+    213 9.900557    172.16.60.5           172.16.60.1           TLSv1    Application Data
+    214 9.900560    172.16.60.5           172.16.60.1           TLSv1    [TCP Out-Of-Order] Application Data
+    215 9.901519    172.16.60.1           172.16.60.5           TLSv1    Application Data
+    216 9.901523    172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Application Data
+    217 9.901618    172.16.60.5           172.16.60.1           TCP      38940 > pop3s [ACK] Seq=732 Ack=2562 Win=21504 Len=0 TSV=51076787 TSER=13238175
+    218 9.901621    172.16.60.5           172.16.60.1           TCP      [TCP Dup ACK 217#1] 38940 > pop3s [ACK] Seq=732 Ack=2562 Win=21504 Len=0 TSV=51076787 TSER=13238175
+    219 9.901936    172.16.60.1           172.16.60.5           TLSv1    Encrypted Alert
+    220 9.901940    172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Encrypted Alert
+    221 9.902013    172.16.60.5           172.16.60.1           TCP      38940 > pop3s [ACK] Seq=732 Ack=2599 Win=21504 Len=0 TSV=51076788 TSER=13238176
+    222 9.902016    172.16.60.5           172.16.60.1           TCP      [TCP Dup ACK 221#1] 38940 > pop3s [ACK] Seq=732 Ack=2599 Win=21504 Len=0 TSV=51076788 TSER=13238176
+    223 9.902139    172.16.60.1           172.16.60.5           TCP      pop3s > 38940 [FIN, ACK] Seq=2599 Ack=732 Win=7936 Len=0 TSV=13238176 TSER=51076788
+    224 9.902142    172.16.60.1           172.16.60.5           TCP      pop3s > 38940 [FIN, ACK] Seq=2599 Ack=732 Win=7936 Len=0 TSV=13238176 TSER=51076788
+    225 9.913586    172.16.60.5           172.16.60.1           TCP      38940 > pop3s [FIN, ACK] Seq=732 Ack=2600 Win=21504 Len=0 TSV=51076799 TSER=13238176
+    226 9.913588    172.16.60.5           172.16.60.1           TCP      38940 > pop3s [FIN, ACK] Seq=732 Ack=2600 Win=21504 Len=0 TSV=51076799 TSER=13238176
+    227 9.913761    172.16.60.1           172.16.60.5           TCP      pop3s > 38940 [ACK] Seq=2600 Ack=733 Win=7936 Len=0 TSV=13238179 TSER=51076799
+    228 9.913765    172.16.60.1           172.16.60.5           TCP      [TCP Dup ACK 227#1] pop3s > 38940 [ACK] Seq=2600 Ack=733 Win=7936 Len=0 TSV=13238179 TSER=51076799

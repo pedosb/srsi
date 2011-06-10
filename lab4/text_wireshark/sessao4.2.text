@@ -1,0 +1,59 @@
+No.     Time        Source                Destination           Protocol Info
+     94 3.041024    172.16.60.5           172.16.60.1           TLSv1    Application Data
+     95 3.041027    172.16.60.5           172.16.60.1           TLSv1    [TCP Out-Of-Order] Application Data
+     96 3.043557    172.16.60.1           172.16.60.5           TLSv1    Application Data
+     97 3.043563    172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Application Data
+     98 3.043667    172.16.60.5           172.16.60.1           TCP      55271 > imaps [ACK] Seq=38 Ack=86 Win=181 Len=0 TSV=51479961 TSER=13338963
+     99 3.043676    172.16.60.5           172.16.60.1           TCP      [TCP Dup ACK 98#1] 55271 > imaps [ACK] Seq=38 Ack=86 Win=181 Len=0 TSV=51479961 TSER=13338963
+    100 3.044780    172.16.60.5           172.16.60.1           TLSv1    Application Data
+    101 3.044783    172.16.60.5           172.16.60.1           TLSv1    [TCP Out-Of-Order] Application Data
+    102 3.046492    172.16.60.1           172.16.60.5           TLSv1    Application Data
+    103 3.046495    172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Application Data
+    104 3.046933    172.16.60.5           172.16.60.1           TLSv1    Application Data
+    105 3.046937    172.16.60.5           172.16.60.1           TLSv1    [TCP Out-Of-Order] Application Data
+    106 3.047274    172.16.60.1           172.16.60.5           TLSv1    Application Data
+    107 3.047277    172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Application Data
+    108 3.047502    172.16.60.5           172.16.60.1           TLSv1    Application Data
+    109 3.047506    172.16.60.5           172.16.60.1           TLSv1    [TCP Out-Of-Order] Application Data
+    110 3.047802    172.16.60.1           172.16.60.5           TLSv1    Application Data
+    111 3.047804    172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Application Data
+    112 3.048401    172.16.60.5           172.16.60.1           TLSv1    Application Data
+    113 3.048405    172.16.60.5           172.16.60.1           TLSv1    [TCP Out-Of-Order] Application Data
+    114 3.049459    172.16.60.1           172.16.60.5           TLSv1    Application Data
+    115 3.049462    172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Application Data
+    116 3.066098    172.16.60.5           172.16.60.1           TLSv1    Application Data
+    117 3.066101    172.16.60.5           172.16.60.1           TLSv1    [TCP Out-Of-Order] Application Data
+    118 3.066649    172.16.60.1           172.16.60.5           TLSv1    Application Data
+    119 3.066651    172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Application Data
+    120 3.073624    172.16.60.5           172.16.60.1           TLSv1    Application Data
+    121 3.073627    172.16.60.5           172.16.60.1           TLSv1    [TCP Out-Of-Order] Application Data
+    122 3.075422    172.16.60.1           172.16.60.5           TLSv1    Application Data
+    123 3.075425    172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Application Data
+    124 3.115540    172.16.60.5           172.16.60.1           TCP      55271 > imaps [ACK] Seq=516 Ack=1716 Win=208 Len=0 TSV=51480033 TSER=13338971
+    125 3.115544    172.16.60.5           172.16.60.1           TCP      [TCP Dup ACK 124#1] 55271 > imaps [ACK] Seq=516 Ack=1716 Win=208 Len=0 TSV=51480033 TSER=13338971
+    280 16.424532   172.16.60.5           172.16.60.1           TLSv1    Application Data
+    281 16.424536   172.16.60.5           172.16.60.1           TLSv1    [TCP Out-Of-Order] Application Data
+    282 16.426547   172.16.60.1           172.16.60.5           TLSv1    Application Data
+    283 16.426550   172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Application Data
+    284 16.426657   172.16.60.5           172.16.60.1           TCP      55271 > imaps [ACK] Seq=553 Ack=1769 Win=208 Len=0 TSV=51493344 TSER=13342309
+    285 16.426660   172.16.60.5           172.16.60.1           TCP      [TCP Dup ACK 284#1] 55271 > imaps [ACK] Seq=553 Ack=1769 Win=208 Len=0 TSV=51493344 TSER=13342309
+    296 16.561147   172.16.60.5           172.16.60.1           TLSv1    Application Data
+    297 16.561150   172.16.60.5           172.16.60.1           TLSv1    [TCP Out-Of-Order] Application Data
+    298 16.562821   172.16.60.1           172.16.60.5           TLSv1    Application Data
+    299 16.562824   172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Application Data
+    300 16.562917   172.16.60.5           172.16.60.1           TCP      55271 > imaps [ACK] Seq=590 Ack=1822 Win=208 Len=0 TSV=51493480 TSER=13342343
+    301 16.562920   172.16.60.5           172.16.60.1           TCP      [TCP Dup ACK 300#1] 55271 > imaps [ACK] Seq=590 Ack=1822 Win=208 Len=0 TSV=51493480 TSER=13342343
+    302 16.563258   172.16.60.5           172.16.60.1           TLSv1    Application Data
+    303 16.563261   172.16.60.5           172.16.60.1           TLSv1    [TCP Out-Of-Order] Application Data
+    304 16.563570   172.16.60.1           172.16.60.5           TLSv1    Application Data
+    305 16.563573   172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Application Data
+    306 16.564026   172.16.60.5           172.16.60.1           TLSv1    Application Data
+    307 16.564029   172.16.60.5           172.16.60.1           TLSv1    [TCP Out-Of-Order] Application Data
+    308 16.564295   172.16.60.1           172.16.60.5           TLSv1    Application Data
+    309 16.564299   172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Application Data
+    310 16.578518   172.16.60.5           172.16.60.1           TLSv1    Application Data
+    311 16.578521   172.16.60.5           172.16.60.1           TLSv1    [TCP Out-Of-Order] Application Data
+    312 16.580211   172.16.60.1           172.16.60.5           TLSv1    Application Data
+    313 16.580214   172.16.60.1           172.16.60.5           TLSv1    [TCP Out-Of-Order] Application Data
+    318 16.619430   172.16.60.5           172.16.60.1           TCP      55271 > imaps [ACK] Seq=733 Ack=2029 Win=208 Len=0 TSV=51493537 TSER=13342347
+    319 16.619432   172.16.60.5           172.16.60.1           TCP      [TCP Dup ACK 318#1] 55271 > imaps [ACK] Seq=733 Ack=2029 Win=208 Len=0 TSV=51493537 TSER=13342347

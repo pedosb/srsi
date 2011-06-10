@@ -1,0 +1,39 @@
+No.     Time        Source                Destination           Protocol Info
+     45 3.318261    172.16.60.5           172.16.60.1           IMAP     Request: DONE
+     46 3.318267    172.16.60.5           172.16.60.1           IMAP     [TCP Out-Of-Order] Request: DONE
+     47 3.320413    172.16.60.1           172.16.60.5           IMAP     Response: * 5 EXISTS
+     48 3.320421    172.16.60.1           172.16.60.5           IMAP     [TCP Out-Of-Order] Response: * 5 EXISTS
+     49 3.320511    172.16.60.5           172.16.60.1           TCP      59773 > imap [ACK] Seq=7 Ack=47 Win=253 Len=0 TSV=51315669 TSER=13297893
+     50 3.320515    172.16.60.5           172.16.60.1           TCP      [TCP Dup ACK 49#1] 59773 > imap [ACK] Seq=7 Ack=47 Win=253 Len=0 TSV=51315669 TSER=13297893
+     51 3.321966    172.16.60.5           172.16.60.1           IMAP     Request: 13 noop
+     52 3.321970    172.16.60.5           172.16.60.1           IMAP     [TCP Out-Of-Order] Request: 13 noop
+     53 3.323348    172.16.60.1           172.16.60.5           IMAP     Response: 13 OK NOOP completed
+     54 3.323351    172.16.60.1           172.16.60.5           IMAP     [TCP Out-Of-Order] Response: 13 OK NOOP completed
+     55 3.323541    172.16.60.5           172.16.60.1           IMAP     Request: 14 getquotaroot "INBOX"
+     56 3.323545    172.16.60.5           172.16.60.1           IMAP     [TCP Out-Of-Order] Request: 14 getquotaroot "INBOX"
+     57 3.323714    172.16.60.1           172.16.60.5           IMAP     Response: * QUOTAROOT "INBOX" "ROOT"
+     58 3.323717    172.16.60.1           172.16.60.5           IMAP     [TCP Out-Of-Order] Response: * QUOTAROOT "INBOX" "ROOT"
+     59 3.323992    172.16.60.5           172.16.60.1           IMAP     Request: 15 UID fetch 5:* (FLAGS)
+     60 3.323995    172.16.60.5           172.16.60.1           IMAP     [TCP Out-Of-Order] Request: 15 UID fetch 5:* (FLAGS)
+     61 3.324129    172.16.60.1           172.16.60.5           IMAP     Response: * 5 FETCH (UID 5 FLAGS (\Recent))
+     62 3.324131    172.16.60.1           172.16.60.5           IMAP     [TCP Out-Of-Order] Response: * 5 FETCH (UID 5 FLAGS (\Recent))
+     63 3.324955    172.16.60.5           172.16.60.1           IMAP     Request: 16 UID fetch 5 (UID RFC822.SIZE FLAGS BODY.PEEK[HEADER.FIELDS (From To Cc Bcc Subject Date Message-ID Priority X-Priority References Newsgroups In-Reply-To Content-Type)])
+     64 3.324958    172.16.60.5           172.16.60.1           IMAP     [TCP Out-Of-Order] Request: 16 UID fetch 5 (UID RFC822.SIZE FLAGS BODY.PEEK[HEADER.FIELDS (From To Cc Bcc Subject Date Message-ID Priority X-Priority References Newsgroups In-Reply-To Content-Type)])
+     65 3.325633    172.16.60.1           172.16.60.5           IMAP     Response: * 5 FETCH (UID 5 RFC822.SIZE 716 FLAGS (\Recent) BODY[HEADER.FIELDS ("From" "To" "Cc" "Bcc" "Subject" "Date" "Message-ID" "Priority" "X-Priority" "References" "Newsgroups" "In-Reply-To" "Content-Type")] {248}
+     66 3.325635    172.16.60.1           172.16.60.5           IMAP     [TCP Out-Of-Order] Response: * 5 FETCH (UID 5 RFC822.SIZE 716 FLAGS (\Recent) BODY[HEADER.FIELDS ("From" "To" "Cc" "Bcc" "Subject" "Date" "Message-ID" "Priority" "X-Priority" "References" "Newsgroups" "In-Reply-To" "Content-Type")] {248}
+     67 3.346182    172.16.60.5           172.16.60.1           IMAP     Request: 17 UID fetch 5 (UID RFC822.SIZE BODY.PEEK[])
+     68 3.346185    172.16.60.5           172.16.60.1           IMAP     [TCP Out-Of-Order] Request: 17 UID fetch 5 (UID RFC822.SIZE BODY.PEEK[])
+     69 3.346339    172.16.60.1           172.16.60.5           IMAP     Response: * 5 FETCH (UID 5 RFC822.SIZE 716 BODY[] {716}
+     70 3.346341    172.16.60.1           172.16.60.5           IMAP     [TCP Out-Of-Order] Response: * 5 FETCH (UID 5 RFC822.SIZE 716 BODY[] {716}
+     71 3.385623    172.16.60.5           172.16.60.1           TCP      59773 > imap [ACK] Seq=286 Ack=728 Win=275 Len=0 TSV=51315735 TSER=13297899
+     72 3.385626    172.16.60.5           172.16.60.1           TCP      [TCP Dup ACK 71#1] 59773 > imap [ACK] Seq=286 Ack=728 Win=275 Len=0 TSV=51315735 TSER=13297899
+     73 3.385758    172.16.60.1           172.16.60.5           IMAP     Response: Return-Path: <netedu@b6.psb.com>
+     74 3.385760    172.16.60.1           172.16.60.5           IMAP     [TCP Out-Of-Order] Response: Return-Path: <netedu@b6.psb.com>
+     75 3.385907    172.16.60.5           172.16.60.1           TCP      59773 > imap [ACK] Seq=286 Ack=1471 Win=298 Len=0 TSV=51315735 TSER=13297909
+     76 3.385910    172.16.60.5           172.16.60.1           TCP      [TCP Dup ACK 75#1] 59773 > imap [ACK] Seq=286 Ack=1471 Win=298 Len=0 TSV=51315735 TSER=13297909
+     77 3.393047    172.16.60.5           172.16.60.1           IMAP     Request: 18 IDLE
+     78 3.393050    172.16.60.5           172.16.60.1           IMAP     [TCP Out-Of-Order] Request: 18 IDLE
+     79 3.394472    172.16.60.1           172.16.60.5           IMAP     Response: + entering idle mode
+     80 3.394475    172.16.60.1           172.16.60.5           IMAP     [TCP Out-Of-Order] Response: + entering idle mode
+     81 3.434610    172.16.60.5           172.16.60.1           TCP      59773 > imap [ACK] Seq=295 Ack=1493 Win=298 Len=0 TSV=51315784 TSER=13297911
+     82 3.434613    172.16.60.5           172.16.60.1           TCP      [TCP Dup ACK 81#1] 59773 > imap [ACK] Seq=295 Ack=1493 Win=298 Len=0 TSV=51315784 TSER=13297911

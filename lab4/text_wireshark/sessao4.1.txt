@@ -1,0 +1,122 @@
+\definecolor{c1}{rgb}{0.208, 0.231, 0.216}
+\definecolor{c2}{rgb}{0.4, 0, 0}
+\begin{Verbatim}[commandchars=\\\{\}]
+\textcolor{black}{No.     Time        Source                Destination           Protocol Info
+}
+\textcolor{c2}{     45 3.318261    172.16.60.5           172.16.60.1           IMAP     Request: DONE
+}
+\textcolor{c1}{     46 3.318267    172.16.60.5           172.16.60.1           IMAP     [TCP Out-Of-Order] Request:}
+\textcolor{c1}{ DONE
+}
+\textcolor{c2}{     47 3.320413    172.16.60.1           172.16.60.5           IMAP     Response: * 5 EXISTS
+}
+\textcolor{c1}{     48 3.320421    172.16.60.1           172.16.60.5           IMAP     [TCP Out-Of-Order] Response}
+\textcolor{c1}{: * 5 EXISTS
+}
+\textcolor{c2}{     49 3.320511    172.16.60.5           172.16.60.1           TCP      59773 > imap [ACK] Seq=7 Ac}
+\textcolor{c2}{k=47 Win=253 Len=0 TSV=51315669 TSER=13297893
+}
+\textcolor{c1}{     50 3.320515    172.16.60.5           172.16.60.1           TCP      [TCP Dup ACK 49#1] 59773 > }
+\textcolor{c1}{imap [ACK] Seq=7 Ack=47 Win=253 Len=0 TSV=51315669 TSER=13297893
+}
+\textcolor{c2}{     51 3.321966    172.16.60.5           172.16.60.1           IMAP     Request: 13 noop
+}
+\textcolor{c1}{     52 3.321970    172.16.60.5           172.16.60.1           IMAP     [TCP Out-Of-Order] Request:}
+\textcolor{c1}{ 13 noop
+}
+\textcolor{c2}{     53 3.323348    172.16.60.1           172.16.60.5           IMAP     Response: 13 OK NOOP comple}
+\textcolor{c2}{ted
+}
+\textcolor{c1}{     54 3.323351    172.16.60.1           172.16.60.5           IMAP     [TCP Out-Of-Order] Response}
+\textcolor{c1}{: 13 OK NOOP completed
+}
+\textcolor{c2}{     55 3.323541    172.16.60.5           172.16.60.1           IMAP     Request: 14 getquotaroot "I}
+\textcolor{c2}{NBOX"
+}
+\textcolor{c1}{     56 3.323545    172.16.60.5           172.16.60.1           IMAP     [TCP Out-Of-Order] Request:}
+\textcolor{c1}{ 14 getquotaroot "INBOX"
+}
+\textcolor{c2}{     57 3.323714    172.16.60.1           172.16.60.5           IMAP     Response: * QUOTAROOT "INBO}
+\textcolor{c2}{X" "ROOT"
+}
+\textcolor{c1}{     58 3.323717    172.16.60.1           172.16.60.5           IMAP     [TCP Out-Of-Order] Response}
+\textcolor{c1}{: * QUOTAROOT "INBOX" "ROOT"
+}
+\textcolor{c2}{     59 3.323992    172.16.60.5           172.16.60.1           IMAP     Request: 15 UID fetch 5:* (}
+\textcolor{c2}{FLAGS)
+}
+\textcolor{c1}{     60 3.323995    172.16.60.5           172.16.60.1           IMAP     [TCP Out-Of-Order] Request:}
+\textcolor{c1}{ 15 UID fetch 5:* (FLAGS)
+}
+\textcolor{c2}{     61 3.324129    172.16.60.1           172.16.60.5           IMAP     Response: * 5 FETCH (UID 5 }
+\textcolor{c2}{FLAGS (\\Recent))
+}
+\textcolor{c1}{     62 3.324131    172.16.60.1           172.16.60.5           IMAP     [TCP Out-Of-Order] Response}
+\textcolor{c1}{: * 5 FETCH (UID 5 FLAGS (\\Recent))
+}
+\textcolor{c2}{     63 3.324955    172.16.60.5           172.16.60.1           IMAP     Request: 16 UID fetch 5 (UI}
+\textcolor{c2}{D RFC822.SIZE FLAGS BODY.PEEK[HEADER.FIELDS (From To Cc Bcc Subject Date Message-ID Priority X-Prior}
+\textcolor{c2}{ity References Newsgroups In-Reply-To Content-Type)])
+}
+\textcolor{c1}{     64 3.324958    172.16.60.5           172.16.60.1           IMAP     [TCP Out-Of-Order] Request:}
+\textcolor{c1}{ 16 UID fetch 5 (UID RFC822.SIZE FLAGS BODY.PEEK[HEADER.FIELDS (From To Cc Bcc Subject Date Message-}
+\textcolor{c1}{ID Priority X-Priority References Newsgroups In-Reply-To Content-Type)])
+}
+\textcolor{c2}{     65 3.325633    172.16.60.1           172.16.60.5           IMAP     Response: * 5 FETCH (UID 5 }
+\textcolor{c2}{RFC822.SIZE 716 FLAGS (\\Recent) BODY[HEADER.FIELDS ("From" "To" "Cc" "Bcc" "Subject" "Date" "Messag}
+\textcolor{c2}{e-ID" "Priority" "X-Priority" "References" "Newsgroups" "In-Reply-To" "Content-Type")] {248}
+}
+\textcolor{c1}{     66 3.325635    172.16.60.1           172.16.60.5           IMAP     [TCP Out-Of-Order] Response}
+\textcolor{c1}{: * 5 FETCH (UID 5 RFC822.SIZE 716 FLAGS (\\Recent) BODY[HEADER.FIELDS ("From" "To" "Cc" "Bcc" "Subj}
+\textcolor{c1}{ect" "Date" "Message-ID" "Priority" "X-Priority" "References" "Newsgroups" "In-Reply-To" "Content-Ty}
+\textcolor{c1}{pe")] {248}
+}
+\textcolor{c2}{     67 3.346182    172.16.60.5           172.16.60.1           IMAP     Request: 17 UID fetch 5 (UI}
+\textcolor{c2}{D RFC822.SIZE BODY.PEEK[])
+}
+\textcolor{c1}{     68 3.346185    172.16.60.5           172.16.60.1           IMAP     [TCP Out-Of-Order] Request:}
+\textcolor{c1}{ 17 UID fetch 5 (UID RFC822.SIZE BODY.PEEK[])
+}
+\textcolor{c2}{     69 3.346339    172.16.60.1           172.16.60.5           IMAP     Response: * 5 FETCH (UID 5 }
+\textcolor{c2}{RFC822.SIZE 716 BODY[] {716}
+}
+\textcolor{c1}{     70 3.346341    172.16.60.1           172.16.60.5           IMAP     [TCP Out-Of-Order] Response}
+\textcolor{c1}{: * 5 FETCH (UID 5 RFC822.SIZE 716 BODY[] {716}
+}
+\textcolor{c2}{     71 3.385623    172.16.60.5           172.16.60.1           TCP      59773 > imap [ACK] Seq=286 }
+\textcolor{c2}{Ack=728 Win=275 Len=0 TSV=51315735 TSER=13297899
+}
+\textcolor{c1}{     72 3.385626    172.16.60.5           172.16.60.1           TCP      [TCP Dup ACK 71#1] 59773 > }
+\textcolor{c1}{imap [ACK] Seq=286 Ack=728 Win=275 Len=0 TSV=51315735 TSER=13297899
+}
+\textcolor{c2}{     73 3.385758    172.16.60.1           172.16.60.5           IMAP     Response: Return-Path: <net}
+\textcolor{c2}{edu@b6.psb.com>
+}
+\textcolor{c1}{     74 3.385760    172.16.60.1           172.16.60.5           IMAP     [TCP Out-Of-Order] Response}
+\textcolor{c1}{: Return-Path: <netedu@b6.psb.com>
+}
+\textcolor{c2}{     75 3.385907    172.16.60.5           172.16.60.1           TCP      59773 > imap [ACK] Seq=286 }
+\textcolor{c2}{Ack=1471 Win=298 Len=0 TSV=51315735 TSER=13297909
+}
+\textcolor{c1}{     76 3.385910    172.16.60.5           172.16.60.1           TCP      [TCP Dup ACK 75#1] 59773 > }
+\textcolor{c1}{imap [ACK] Seq=286 Ack=1471 Win=298 Len=0 TSV=51315735 TSER=13297909
+}
+\textcolor{c2}{     77 3.393047    172.16.60.5           172.16.60.1           IMAP     Request: 18 IDLE
+}
+\textcolor{c1}{     78 3.393050    172.16.60.5           172.16.60.1           IMAP     [TCP Out-Of-Order] Request:}
+\textcolor{c1}{ 18 IDLE
+}
+\textcolor{c2}{     79 3.394472    172.16.60.1           172.16.60.5           IMAP     Response: + entering idle m}
+\textcolor{c2}{ode
+}
+\textcolor{c1}{     80 3.394475    172.16.60.1           172.16.60.5           IMAP     [TCP Out-Of-Order] Response}
+\textcolor{c1}{: + entering idle mode
+}
+\textcolor{c2}{     81 3.434610    172.16.60.5           172.16.60.1           TCP      59773 > imap [ACK] Seq=295 }
+\textcolor{c2}{Ack=1493 Win=298 Len=0 TSV=51315784 TSER=13297911
+}
+\textcolor{c1}{     82 3.434613    172.16.60.5           172.16.60.1           TCP      [TCP Dup ACK 81#1] 59773 > }
+\textcolor{c1}{imap [ACK] Seq=295 Ack=1493 Win=298 Len=0 TSV=51315784 TSER=13297911
+}
+\textcolor{c2}{}
+\end{Verbatim}
