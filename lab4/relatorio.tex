@@ -114,7 +114,14 @@ figura \ref{fig:topologia}.
 
 \subsection{DNS}
 
-A configuração \ref{conf:dns} mosta o registo DNS para a zona psb.com.
+A configuração \ref{conf:dns} mostra o registo DNS para a zona psb.com.
+Observamos que como esperado os registros MX apontam para endereços válidos
+desse domínio. Idealmente um servidor com views deveria ser implementado, isto
+é, os servidores IMAP e POP3 só seriam observados dentro de cada bancada, já os
+para os servidores de relay respostas diferentes deferiam ser encaminhadas se a
+query fosse feita internamente ou do exterior.
+Porém por questões de simplicidade não entramos a esse nível de detalhamento na
+configuração.
 
 \begin{config}
 	\verbatiminput{conf/pa/psb.com.zone}
