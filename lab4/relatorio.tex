@@ -32,7 +32,7 @@ Desenhar e correr um serviço de E-mail}
 
 Em virtude da configuração DNS do laboratório estar {\bf incorrecta} decidimos 
 mudar a topologia da rede conforme a figura \ref{fig:topologia}.
-Isto deveu-se ao facto de nem a máquina denominada por carvoeiro no 
+Esta alteração deveu-se ao facto de nem a máquina denominada por carvoeiro no 
 guião (192.168.109.2), nem as máquinas com os IP 193.136.28.10 e 172.16.2.2 
 presentes na rede, constarem de serviços DNS que conhecessem, simultaneamente,
 os registo MX e A dos GNUs.
@@ -47,10 +47,10 @@ Estas afirmações podem ser confirmadas pelos logs \ref{log:carvoeiromx},
 e \ref{log:172a}.
 
 Embora a topologia implementada ter sido diferente do guião achámos que a
-topologia não foi alterada signitivamente face ao trabalho proposto.
+topologia não foi alterada signitivamente face ao objectivo trabalho proposto.
 
-O trabalho realizado diferiu, essencialmente, em dois aspectos. No primeiro,
-com o facto das os computadores estarem ligados directamente ao mesmo
+O trabalho realizado diferiu, essencialmente, em dois aspectos. Em primeiro
+lugar, com o facto dos computadores estarem ligados directamente ao mesmo
 switch. E em segundo, pelo domínio \emph{psb.com} ter sido configurado
 numa máquina que chamámos de ``pa'' e que serviu como cliente
 pop3 e imap.
@@ -102,16 +102,20 @@ pop3 e imap.
 
 \section{Configurações}
 
-
+Os ficheiros das configurações encontram-se em anexo no arquivo ``conf''.
+Dentro deste arquivo encontram-se pastas com o nome ``gXY'' com os ficheiros
+de configuração para cada ``GNUXY''. Adicionalmente, encontra-se ainda um
+arquivo com o nome ``pa'' com as configurações do servidor DNS presente na 
+figura \ref{fig:topologia}.
 
 \section{Registo de Logs}
 
 Com o objectivo de registar o tráfego completo da rede configurámos uma porta
 do switch como uma porta SPAN (Switched Port Analyzer) por forma a escutar todo
 o tráfego da rede no Wireshark.
-Uma vez que se tratam de arquivos de grande dimensão decidímos anexar ao 
-relatório um arquivo com todos estes registos. No entanto, eles estão organizados
-em sessões como se segue:
+Uma vez que os arquivos das capturas são de grande dimensão decidímos anexar 
+ao relatório um arquivo com todos estes registos com o nome de ``wireshark''. 
+A sessões encontram-se organizadas como se segue:
 
 \begin{itemize}
 	\item Sessão 1 - Tráfego de SMTP dentro da bancada 6.
@@ -127,6 +131,16 @@ em sessões como se segue:
 	\item Sessão 5.5 - Mail do user1 da bancada 5 para o user2 da bancada 6.
 	\item Sessão 5.6 - Mail do user1 da bancada 5 para o netedu da bancada 6.
 \end{itemize}
+
+\section{Análise de resultados}
+
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[height=6in]{screenshots/sessao1_smtp}
+	\end{center}
+	\caption{Topologia de rede implementada.}
+	\label{fig:topologia}
+\end{figure}
 
 \section{Conclusões}
 SSL: encriptacao + overhead
