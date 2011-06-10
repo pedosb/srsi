@@ -112,6 +112,17 @@ de configuração para cada ``GNUXY''. Adicionalmente, encontra-se ainda um
 arquivo com o nome ``pa'' com as configurações do servidor DNS presente na 
 figura \ref{fig:topologia}.
 
+\subsection{DNS}
+
+A configuração \ref{conf:dns} mosta o registo DNS para a zona psb.com.
+
+\begin{config}
+	\verbatiminput{conf/pa/psb.com.zone}
+  \caption{Registo DNS para a zona psb.com.}
+	\label{conf:dns}
+\end{config}
+
+
 \section{Registo de Logs}
 
 Com o objectivo de registar o tráfego completo da rede configurámos uma porta
@@ -212,9 +223,14 @@ identificada na Sessão 4.1 devido à encriptação dos dados.
 Neste trabalho foi possível comprovar a utilização do protocolo SMTP no 
 envio de e-mails para o serviço Postfix. E, quase em simultâneo, verificar 
 a utilização dos protocolos POP3 e IMAP no download de e-mails do 
-serviço Postfix.
+serviço Postfix. Bem como as suas principais diferenças.
+
+No protocolo POP3 sempre que é lido um e-mail do servidor o mesmo é
+apagado do servidor. Por contraste, no protocolo IMAP isto pode não se passar.
+
 Também observámos a forma como os diversos serviços de SMTP colaboram na
 troca de mensagens por forma às mesmas chegarem ao destino apropriado.
+
 Adicionalmente, podemos observar através das capturas do Wireshark, que
 quando o protocolo POP3 ou IMAP são utilizados sobre SSL, todas as
 mensagens trocadas com o serviço Postfix são encriptadas. O que provoca
