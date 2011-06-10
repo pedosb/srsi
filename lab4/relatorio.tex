@@ -11,6 +11,8 @@
 \usepackage{verbatim}
 \usepackage{url}
 \usepackage{morefloats}
+\usepackage{xcolor}
+\usepackage{fancyvrb}
 
 \usepackage{float}
 \floatstyle{ruled}
@@ -27,13 +29,10 @@ Desenhar e correr um serviço de E-mail}
 \begin{document}
 
 \maketitle
+\tableofcontents
 
 \section{Topologia}
 
-{
-\scriptsize
-\verbatiminput{text_wireshark/sessao1.txt}
-}
 
 Em virtude da configuração DNS do laboratório estar {\bf incorrecta} decidimos 
 mudar a topologia da rede conforme a figura \ref{fig:topologia}.
@@ -137,8 +136,76 @@ A sessões encontram-se organizadas como se segue:
 	\item Sessão 5.6 - Mail do user1 da bancada 5 para o netedu da bancada 6.
 \end{itemize}
 
+Em anexo no relatório, estão registada todas as sessões à excepção das
+sessões 5.
+
 \section{Análise de resultados}
 
+\subsection{Sessão 1}
+
+Nesta sessão podemos observar, o início do handshake TCP entre o cliente
+e o servidor no pacote número 17 e o estabelecimento da conversa SMTP
+no pacote 27. O envio da mensagem SMTP própriamente dita é iniciada no pacote
+31 com a mensagem ``EHLO''. Posteriormente seguida por uma mensagem enviada
+com o remetente do e-mail numa mensagem ``MAIL FROM'' no pacote 37, pelo 
+destinatário numa mensagem ``RCPT TO'' no pacote 40, por uma mensagem ``DATA'' 
+no pacote 45 e pelo conteúdo do e-mail num pacote IMF com o número 49. Após
+esta troca de mensagens o protocolo STMP termina a comunicação com o pacote 55 e
+o protocolo TCP termina a comunicação com o pacote 64.
+
+Já no que diz respeito ao download dos e-mails via POP3, podemos observar
+o handshake TCP inicial a partir do pacote 262 e o início da sessão POP3
+com um ``OK Hello there''. Após o qual podemos observar a autenticação
+POP3 que é conseguida com a mensagem ``OK logged in'' no pacote 284. Após este
+pacote é possível observar o processo de sincronização das mensagens
+locais com as presentes no servidor. E finalmente, o término da sessão POP3
+e posterior fecho da sessão TCP.
+
+\subsection{Sessão 2}
+
+Nesta sessão, o user1 da bancada 6 enviou uma mensagem ao user2 da bancada 5.
+Como tal, o utilizador user1 enviou um e-mail para o serviço Postfix do
+GNU61, que encaminhou o e-mail para o relay do GNU63,
+que por sua vez reencaminhou o e-mail para o GNU64 via exterior, que serviu de relay
+e entregou o e-mail no seu destino final no serviço Postfix do GNU53.
+
+Uma das formas possíveis para monitorar o trajecto da mensagem de e-mail é,
+por exemplo, seguir os pacotes IMF com o conteúdo do e-mail trocados nestas 
+máquinas. Os pacotes referentes às trocas das mensagens IMF são:
+\begin{itemize}
+	\item Pacote 108 - E-mail trocado entre ``pa'' e o GNU61.
+	\item Pacote 657 - E-mail trocado entre GNU61 e GNU63.
+	\item Pacote 1103 - E-mail trocado entre GNU63 e GNU54.
+	\item Pacote 1155 - E-mail trocado entre GNU54 e GNU53.
+\end{itemize}
+
+Como se pode observar o GNU61, não conseguiu comunicar diretamente com o mundo 
+exterior, o GNU61 teve que usar o relay GNU63, para o fazer. Da mesma forma, o
+GNU53 não pode ser acedido do exterior diretamente, teve de ser alcançado
+por intermédio do relay GNU54. O que faz com que o requisito da utilização
+dos relays do trabalho prático ter sido alcançado.
+
+\subsection{Sessão 3.1}
+
+Esta sessão foi em tudo similar à Sessão 1 registada.
+
+\subsection{Sessão 3.2}
+
+Comparativamente à Sessão 1, em que foi possível observar uma sessão POP3 sem
+encriptação, nesta sessão não foi possível observar o conteúdo dos pacotes POP3
+no Wireshark. Aqui os pacotes apareceram com a mensagem ``Application
+Data'' por terem sido encriptados e não terem sido reconhecidos como
+uma comunicação numa sessão POP3 válida.
+
+\subsection{Sessão 4.1}
+
+
+
+\subsection{Sessão 4.2}
+
+Á semelhança do que se passou com a Sessão 3.2, correspondente à comunicação
+POP3 sobre SSL, nesta sessão não foi possível identificar a comunicação IMAP
+identificada na Sessão 4.1 devido à encriptação dos dados.
 
 \section{Conclusão}
 
@@ -153,4 +220,43 @@ quando o protocolo POP3 ou IMAP são utilizados sobre SSL, todas as
 mensagens trocadas com o serviço Postfix são encriptadas. O que provoca
 um overhead na comunicação entre Postfix e cliente de e-mail.
 
+\section{Anexo - Capturas do wireshark}
+
+\subsection{Sessão 1}
+{
+\scriptsize
+\input{text_wireshark/sessao1.txt}
+}
+
+\subsection{Sessão 2}
+{
+\scriptsize
+\input{text_wireshark/sessao2.txt}
+}
+
+\subsection{Sessão 3.1}
+{
+\scriptsize
+\input{text_wireshark/sessao3.1.txt}
+}
+
+\subsection{Sessão 3.2}
+{
+\scriptsize
+\input{text_wireshark/sessao3.2.txt}
+}
+
+\subsection{Sessão 4.1}
+{
+\scriptsize
+\input{text_wireshark/sessao4.1.txt}
+}
+
+\subsection{Sessão 4.2}
+{
+\scriptsize
+\input{text_wireshark/sessao4.2.txt}
+}
+
 \end{document}
+
